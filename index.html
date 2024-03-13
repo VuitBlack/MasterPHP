@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>  <!-- El head es una etiqueta que no se muesta en la pagina web -->
+        <title>Mi primera web</title>
+    </head>
+    <body>  <!-- Es el cuerpo de la pagina web y es lo que se muestra. -->
+        <h1>Titulo de mi página</h1>
+        <h2>Bienvenidos a mi primera Web</h2>
+        <p> <!-- La etiqueta p genera párrafos-->
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis, lacus in blandit viverra, nisl diam blandit tortor, sed facilisis nulla metus et velit. Nam ultrices posuere neque, non lobortis arcu rhoncus quis. Suspendisse aliquam felis nisl, in suscipit lectus gravida quis. Nam laoreet vitae urna in sollicitudin.<br/> Nam ultricies purus lectus, eget blandit felis dictum et. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam in purus id orci dapibus ultrices eu et enim. 
+        </p>
+        <p>
+            Vivamus sem arcu, iaculis vel nibh vitae, iaculis lobortis libero. Suspendisse id elit vel arcu lobortis ultricies. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus arcu odio, imperdiet eu interdum ut, venenatis vel sem. Phasellus aliquam augue eu maximus congue. Fusce ac semper dolor. Pellentesque a leo justo. Donec et urna vitae magna hendrerit gravida. Ut tempus mollis augue. Sed tempus tristique risus eu fringilla. Proin eget nunc arcu.
+        </p>
+        <p>
+            Vestibulum dignissim tincidunt sapien, in convallis nisl consectetur dapibus. Pellentesque vel porta metus. Fusce nec lacinia mauris. Morbi sodales sed est et pharetra. Praesent pellentesque ante sed gravida tempus. Cras sit amet eros eu ex vestibulum placerat sit amet in lectus. Pellentesque lobortis nulla sed venenatis porttitor. Integer dignissim in mi facilisis dignissim. Sed nec metus vel lacus ultricies semper. <br/> <!--La etiqueta br es un retorno en el texto.-->
+        </p>
+        <br/> <!--La etiqueta br es un retorno en el texto.-->
+        <hr/> <!--La etiqueta hr hace un salto de línea y pone una línea horizontal divisoria.-->
+        <h2>Imágenes en HTML</h2>
+        <P>
+            La etiqueta <strong><em>img</em></strong> es la que se encarga de cargar las imágenes dentro de las webs html, y sus atributos son:
+            <ul>
+                <li><strong><em>alt</em></strong>: Carga un texto si falla la imágen durante la carga.</li>
+                <li><strong><em>title</em></strong>: Título que se le asigna a la imágen.</li>
+                <li><strong><em>src</em></strong>: Sirve para indicar la ruta de la imágen para que se cargue en la web.</li>
+                <li><strong><em>width</em></strong>: Sirve para indicar la anchura de la imágen.</li>
+                <li><strong><em>height</em></strong>: Sirve para inidicar la altura de la imágen.</li>
+            </ul>
+            <img src="Images/gatito.jpg" alt="Imagen de un cachorro de gato Scottish British" title="Foto de un cachorro de gato."/>
+        </P>
+        <hr/>
+        <h3>Tercer encabezado de la página</h3>
+        <!--La etiqueta strong pone el texto en negrita.
+            La etitueta em pone el texto en cursiva.
+            La etiqueta span no hace nada directamente sobre el texto sirve para colocar identificadores o clases para luego usarlas con CSS.
+            La etiqueta blockquota realiza una cita en el texto.-->
+        <p> 
+            Vestibulum nunc ante, porttitor nec urna sed, fringilla ligula. <strong> Morbi ut tellus id dolor laoreet interdum vestibulum ut urna.</strong> Nullam eu metus convallis, condimentum lorem quis, cursus mi. <em>Phasellus magna urna, congue et massa a, laoreet molestie arcu.</em> Nulla gravida dui et enim pretium eleifend sed lacinia nunc. Quisque faucibus urna sit amet tellus egestas aliquam. <span id="resaltado" class="rojo amarillo"> Pellentesque at risus euismod, efficitur enim convallis, porttitor dui.</span> Mauris ut dapibus massa. Duis tempus felis vitae posuere placerat. Etiam id nisi ligula. <br/>
+            Cras et erat in tortor suscipit consectetur. Maecenas eu elit at libero volutpat facilisis. Cras non justo et sem faucibus facilisis ac vel justo. 
+            <blockquote>
+            In aliquet risus quam, in luctus odio dignissim condimentum. Donec sagittis commodo ex, nec porta sapien porta sollicitudin. Nullam id vehicula tellus, dictum sollicitudin erat. Donec egestas vestibulum libero id pulvinar. Nunc ultricies lectus et leo malesuada feugiat. Quisque efficitur nec orci in maximus. 
+            </blockquote>
+            Donec dignissim augue id eleifend efficitur. Integer commodo nisi et rhoncus ultrices. Fusce vel nisl mauris. Ut eleifend blandit enim, a vestibulum ex cursus in. 
+        </p>
+        <hr/> <!--La etiqueta hr hace un salto de línea y pone una línea horizontal divisoria.-->
+        <h3>Cuarto encabezado de la página - Listas</h3>
+        <p>Un tipo de lista son las ordenadas que se realizan mediante la etiquta <strong><em>ol</em></strong> cada elemento de la lista debe ir dentro de una etiqueta <strong><em>li</em></strong> como la que veremos a continuación:<br/>
+            <h4>Listado de frutas</h4>
+            <ol>
+                <li>Manzana.</li>
+                <li>Naranja</li>
+                <li>Pera</li>
+                <li>Sandía</li>
+            </ol>
+        </p>
+        <p>Otro tipo de lista son las desordenadas que se realizan mediante la etiquta <strong><em>ul</em></strong> cada elemento de la lista debe ir dentro de una etiqueta <strong><em>li</em></strong> y cada lista puede tener una sublista como la que veremos a continuación:<br/>
+            <h4>Listado de frutas</h4>
+            <ul>
+                <li>Manzana.
+                    <ul>
+                        <li>Rojas</li>
+                        <li>Verdes</li>
+                        <li>Amarillas</li>
+                    </ul>
+                </li>
+
+                <li>Naranja</li>
+                <li>Pera</li>
+                <li>Sandía</li>
+            </ul>
+        </p>
+        <hr/> <!--La etiqueta hr hace un salto de línea y pone una línea horizontal divisoria.-->
+        <h2>Tablas en HTML</h2>
+        <P>
+            Hace años se usaban las tablas para maquetar las web en HTML actualmente esto se hace a través de CSS con el sistema de cajas.<br>
+            Actualmente las tablas se usan solamente para introducir información de forma organizada. <br><br>
+            La etiqueta <strong><em>table</em></strong> es la que se encarga de representar las tablas y sus etiquetas son:
+            <ul>
+                <li>Etiqueta ENCABEZADO: <strong><em>tT</em></strong>: Se encarga de representar la fila del encabezado en negrita.</li>
+                <li>Etiqueta FILAS: <strong><em>tr</em></strong>: Se encarga de representar una fila.</li>
+                <li>Etiqueta COLUMNAS <strong><em>td</em></strong>: Se encarga de representar una columna.</li>
+                <li>Atributo bordes<strong><em>border</em></strong>: Dibuja los bordes de la tabla.</li>
+                <li>Atributo expandir<strong><em>colspan</em></strong>: Sirve para expandir las columnas.</li>
+                <li><strong><em>height</em></strong>: Sirve para inidicar la altura de la imágen.</li>
+            </ul>
+            Un ejemplo de como quedaraía una tabla en HTML es la que vemos a continuación: <br>
+            <table border="1">
+                <tr>
+                    <th>Nombre:</th>
+                    <th>Apellidos:</th>
+                    <th>País:</th>
+                </tr>
+                <tr>
+                    <td>Tony</td>
+                    <td>Stark</td>
+                    <td>United States of America</td>
+                </tr>
+                <tr>
+                    <td>Jhon</td>
+                    <td colspan="2">Smith</td>
+                </tr>
+            </table>
+
+        </P>
+
+
+    </body>
+
+</html>
