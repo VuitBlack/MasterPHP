@@ -97,8 +97,62 @@
             </table>
 
         </P>
+        <hr/>
         <h3>Formularios en HTML</h3>
-        
+        <p>
+            La etitueta que se usa para crear un formulario en html es: <strong><em>form</em></strong>, la etiqueta <em>form</em> cuneta con bastantes atributos los mas destacados son: <br>
+            <ul>
+                <li><strong><em>Action</em></strong>: para indicar donde queremos enviar el formulario. </li>
+                <li><strong><em>method</em></strong>: para indicar que método HTTP queremos utilizar.</li>
+            </ul>
+            <blockquote>
+                <ul>
+                    ara incluir una etiqueta que de una descripción al campo que vamos a añadir a nuestro formulario debemos usar la etiqueta <strong><em>label</em></strong>. Esta etiqueta se relacionara con el campo del formulario que deseemos si introducimos el atributo <strong><em>for</em></strong> simplemente introducimos el <em>name</em> de nuestra input. <br>
+               </ul>
+               <ul>
+                    Para incluir un campo de tipo texto usamos la etiqueta <strong><em>input</em></strong> y le decimos mediante el atributo <strong><em>type</em></strong> que es de tipo texto, con el atributo <strong><em>name</em></strong> indicamos el nombre para que un Script exterior acceda al campo, y el atributo <strong><em>id</em></strong> le damos un identificador único en este documento, para posteriormente hacer referencia a él, con el atributo <strong><em>placeholder</em></strong> aparecerá autorelleno el campo del formulario, y cuando escribamos encima automáticamente se borra.<br>
+                </ul>
+                <ul>
+                    Para incluir un campo de tipo area de texto usamos la etiqueta <strong><em>texarea</em></strong>, la cual cuenta con los mismos atributos de <strong><em>name y descripcion</em></strong> entre otros. <br>
+                </ul>
+                <ul>
+                    Para inclir una pequeña lista de seleccion con botones de tipo circulares usamos la etiqueta <strong><em>input type="radio"</em></strong> y de igual manera le asignamos un atributo <strong><em>name</em></strong> para poder vincularlr y luego el atributo <strong><em>value</em></strong> el cual define el valor que enviara esté elemento. <br>
+                </ul>
+                <ul>
+                    Para incluir campos de selección usamos la etiqueta <strong><em>select</em></strong> utilizaremos los atributos <strong><em>name e id</em></strong> para identificar el campo del formulario. Dentro de nuestra etiqueta <em>select</em> debemos usar la etiqueta <strong><em>option</em></strong> la cual está definda mediante el atributo <strong><em>vale</em></strong>par determinar su valor. Podemos usar tantas opciones como deseemos. <br/>
+                </ul>
+                
+
+            </blockquote>
+        </p>
+        <form>
+            <p>
+                <label for="nombreDev">Nombre: </label>
+                <input type="text" name="nombreDev" id="nombre_1" placeholder="Escribe tu nombre...">
+            </p>
+            <p>
+                <label for="descripcion">Descripción:</label>
+                <textarea name="descripcion" id="descripcion_1"></textarea>
+            </p>
+            <p>
+                <label for="genero">Sexo:</label><br/>
+                <input type="radio" name="genero" value="Homre">Hombre <br/>
+                <input type="radio" name="genero" value="Mujer">Mujer <br/>
+                <input type="radio" name="genero" value="nada">No definido <br/>
+            </p>
+            <p>
+                <label for="selector_sexo">Sexo:</label>
+                <select name="selector_sexo" id="selGenero">
+                    <option value="hombre">Hombre</option>
+                    <option value="mujer">Mujer</option>
+                    <option value="nada">No definido</option>
+                </select>
+            </p>
+            <p>
+                <input type="submit" value="Enviar formulario" />
+            </p>
+
+        </form>
 
 
     </body>
