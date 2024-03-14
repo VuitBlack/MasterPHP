@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primera web</title>
+</head>
+<body>
+    <!--Encabezado-->
+    <h1>Ejemplo de páginas web múltiples en HTML</h1>
+    <!--Menú-->
+    <ul>
+        <li><a href="index.html" title="Inicio">Inicio</a></li>
+        <li><a href="contenidos.html" title="Contenidos">Contenidos</a></li>
+        <li><a href="contacto.html" title="Formulario de contacto">Formulario de contacto</a></li>
+    </ul>
+    <hr/>
+    <!--Contenido de contacto.html-->
+    <h2>Formulario de contacto</h2>
+    <form>
+        <p>
+            <label for="nombre">Nombre </label><br/>
+            <input type="text" name="nombre">
+        </p>
+        <p>
+            <label for="biografia">Biografia</label><br/>
+            <textarea name="biografia" id="bio_1"></textarea>
+        </p>
+        <p>
+            <label for="edad">Edad</label><br/>
+            <select name="edad">
+                <option value="menor">Menor de edad</option>
+                <option value="mayor">Mayor de edad</option>
+                <option value="aduto">Adulto</option>
+                <option value="anciano">Mayor de 65 años</option>
+            </select>
+        </p>
+        <p>
+            <input type="submit" value="Enviar email">
+        </p>
+    </form>
+
+</body>
+</html>
