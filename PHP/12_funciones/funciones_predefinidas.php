@@ -72,7 +72,7 @@ if(empty($texto)){
     echo 'La variable TIENE CONTENIDO.<br/>';
 }
 
-//STRLEN nos devuelve la longitud de una caden
+//STRLEN nos devuelve la longitud de una cadena
 $cadena='12345';
 echo strlen($cadena).'<br/>';
 

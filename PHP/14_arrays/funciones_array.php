@@ -63,7 +63,8 @@ echo '<hr/>';
 //ARRAY_SEARCH Permite realizar una búsqueda en un array
 echo '<strong>ARRAY_SEARCH Permite realizar una búsqueda en un array</strong><br/>';
 $resultado = array_search('Rihana', $cantantes);
-echo 'He encontrado a: '.$cantantes[$resultado].' dentro del array de cantantes.';
+echo 'He encontrado a: '.$cantantes[$resultado].' dentro del array de cantantes.<br/>';
+echo 'Se encuentra en la posición: '.$resultado;
 echo '<hr/>';
 
 //COUNT cuenta el número de elementos 
