@@ -53,6 +53,30 @@ $indice = array_rand($cantantes);
 echo $cantantes[$indice];
 echo '<hr/>';
 
+//ARRAY_REVERSE Sirve para dar la vuelta al array completo.
+echo '<strong>ARRAY_REVERSE Sirve para dar la vuelta al array completo</strong><br/>';
+foreach (array_reverse($numeros) as $numero) {
+    echo $numero;
+}
+echo '<hr/>';
+
+//ARRAY_SEARCH Permite realizar una búsqueda en un array
+echo '<strong>ARRAY_SEARCH Permite realizar una búsqueda en un array</strong><br/>';
+$resultado = array_search('Rihana', $cantantes);
+echo 'He encontrado a: '.$cantantes[$resultado].' dentro del array de cantantes.';
+echo '<hr/>';
+
+//COUNT cuenta el número de elementos 
+echo '<strong>COUNT cuenta el número de elementos</strong><br/>';
+$cantidad = count($numeros);
+echo 'El array numeros tiene dentro: '.$cantidad.' elementos';
+echo '<hr/>';
+
+//SIZEOF cuenta el número de elementos
+echo '<strong>SIZEOF cuenta el número de elementos</strong><br/>';
+$cantidad = sizeof($numeros);
+echo 'El array numeros tiene dentro: '.$cantidad.' elementos';
+echo '<hr/>';
 
 
 ?>
