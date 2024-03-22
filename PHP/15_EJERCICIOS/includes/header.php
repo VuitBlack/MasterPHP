@@ -12,10 +12,11 @@
         <!-- Cabecera -->
         <div class="Cabecera">
             <h1>Ejercicio 5 - Tabla de videojuegos</h1>
+            <p>En está página podemos ver una tabla de videojuegos basados en esta lista:</p>
             <ul>
-                <li><a href="accion.php">Videojuegos de Acción</a></li>
-                <li><a href="aventura.php">Videojuegos de Aventura</a></li>
-                <li><a href="deportes.php">Videojuegos de Deportes</a></li>
+                <li>Videojuegos de Acción</a></li>
+                <li>Videojuegos de Aventura</a></li>
+                <li>Videojuegos de Deportes</a></li>
             </ul>
             <hr/>
         </div>
