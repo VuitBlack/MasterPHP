@@ -24,5 +24,3 @@ header('Location:show_cookies.php');
 
 
 ?>
-
-<h1><a href="show_cookies.php">Ver las cookies</a></h1>
