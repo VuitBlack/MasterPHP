@@ -33,7 +33,7 @@ if(!empty($_POST['nombre']) && !empty($_POST['apellidos']) && !empty($_POST['eda
         $error='pass';
     }
     
-    //Para debuggear la validacion usamos
+    //Para debuggear la validacion del formulario usamos
     /*
     var_dump($_POST);
     var_dump($error.'<br/>');
