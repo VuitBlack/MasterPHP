@@ -2,7 +2,7 @@
 <html lang="es">
     <head>
         <meta charset="utf-8" />
-        <title>Validación de formularios PHP</title>
+        <title>Validación formularios PHP</title>
     </head>
     <body>
         <h1>Validación de formularios PHP</h1>
