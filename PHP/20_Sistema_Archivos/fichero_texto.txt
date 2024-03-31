@@ -1,0 +1,6 @@
+Hola soy un archvo de texto;
+que tal estas.
+Esto es una prueba 
+de que soy capaz de
+LEER TEXTO EN VARIAS LÍNEAS.
+<br/>Esto es una prueba de inserción de texto desde PHP
