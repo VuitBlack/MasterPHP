@@ -21,5 +21,5 @@ if (isset($_GET['email'])){
     
     
 }else{
-    echo 'Pasa por get un email...'
+    echo 'Pasa por get un email....'
 }
