@@ -1,0 +1,45 @@
+
+BBDD
+Una base de datos es un conjunto de datos perteneciente a un mismo contexto
+y almacenados sistemáticamente para su posterior uso.
+
+SGBD - Sistema gestor de base de datos, permiten almacenar y posteriormente
+acceder y gestionar los datos almacenados en la BBDD.
+
+Elementos de BBDD:
+    TABLAS:
+        COLUMNAS o CAMPOS
+        FILAS o REGISTROS
+        
+Para acceder desde la terminal a MySQL usar el comando
+    mysql -u root -p
+veremos que entra en MariaDB porque XAMPP ha cambiado MySQL por MariaDB pero todos los comandos y herramientas 
+funcionan igual.
+COMANDOS:
+    STATUS nos da información sobre la version y todo lo relacionado con MariaDB
+    SHOW DATABASES; muestra las bases de datos.
+    CREATE DATABASE blog_master; Crea una base de datos con nombre "blog_master"
+    DROP DATABASE blog_master; Borra la base de datos de nombre "blog_master"
+    USE blog_master; Activa la base de datos "blog_master" para su uso.
+    SHOW TABLES; muestra las tablas de la BBDD activa
+    SELECT database(); sirve para saber que BBDD estamos usando.
+    CREATE TABLE usuarios; Creamos tabla usuarios.
+    DESCRIBE usuarios; muestra la descripción de la tabla usuarios. También funciona (DESC usuarios;)
+    DROP TABLE usuarios; Borra la tabla usuarios.
+
+RESTRICCIONES DE INTEGRIDAD
+    NOT NULL - no permite dejar un campo vacío.
+    NULL - permite dejar el campo vacío.
+    DEFAULT 'xxxx' - introduce un dato por defecto en un campo.
+    AUTO_INCREMENT - Hace un autoincremento en el campo, solo sirve para Primary keys.
+    CONSTRAINT pk_usuarios PRIMARY KEY(id) - Sirve para crear una clave primaria sobre el campo id
+
+MODIFICAR TABLAS -> ALTER TABLE xxxxxx
+    RENOMBRAR una tabla usamos el atributo RENAME TO.
+    CAMBIAR EL NOMBREa un campo usamos el atributo CHANGE.
+    MODIFICAR UN CAMPO usamos el atributo MODIFY.
+    AÑADIR UN CAMPO usamos el atributo ADD.
+    AÑADIR UNA RESTRICTION A UN CAMPO usamos el atributo ADD CONSTRAINT.
+    BORRAR UN CAMPO usamos el atributo DROP seguido de la columna.
+
+DISEÑO DE BASE DE DATOS - PROGRAMA DIA software libre (buscar en google "dia program")
