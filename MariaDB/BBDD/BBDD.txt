@@ -1,3 +1,7 @@
+PARA ACCEDER DESDE LA CONSOLA A LA BBDD USAR EL COMANDO
+
+./Applications/XAMPP/xamppfiles/bin/mariadb
+./Applications/XAMPP/xamppfiles/bin/mysql
 
 BBDD
 Una base de datos es un conjunto de datos perteneciente a un mismo contexto
@@ -43,3 +47,32 @@ MODIFICAR TABLAS -> ALTER TABLE xxxxxx
     BORRAR UN CAMPO usamos el atributo DROP seguido de la columna.
 
 DISEÑO DE BASE DE DATOS - PROGRAMA DIA software libre (buscar en google "dia program")
+
+    En mi caso lo hago con UML-LET que tengo instalado en Visual Studio Code es igual.
+
+PRIMARY KEY y FOREIGN KEY
+
+    PRIMARY KEY
+    Las claves primarias es el campo o la combinación de campos que identifica 
+    de forma úinca cada registro o fila de una tabla. (Puede ser una columna o combinación de columnas).
+    No puede haber dos filas con la misma clave primaria.
+    Se crean:       
+        CONSTRAINT PK_usuarios PRIMARY KEY(id)
+
+    FOREIGN KEY
+    Es una limitación referencial entre dos tablas, la FOREIGN KEY identifica una columna o gruop de 
+    columnas (en tabla hija) y se refiere a otra columna o grupo de columnas (en tabla padre) las cuales
+    deben ser claves primarias en la tabla padre.
+    Se crean:
+        CONSTRAINT FK_entradas_categorias FOREIGN KEY(categoria_id) REFERENCES categorias(id),
+        
+    Pueden tener otra restricción adicional como son:
+        ON UPDATE CASCADE: se usa para actualizar en cascada, quiere decir que si un registro de la tabla
+        padre se actualiza, también se actualizará en la tabla hija.
+        ON DELETE CASCADE: se usa para borrar en cascada, quiere decir que si un registro de la tabla
+        padre se borra, también se borarará en la tabla hija.
+            Se puede añadir una acción desués del ON DELETE:
+                SET NULL: al borrar el registro se pondrá a NULL
+                SET DEFAULT: al borrar el registro se pondrá en a un valor por defecto
+                NO ACTION: No hace ninguna acción (es lo que hace si no se le indica nada)
+
