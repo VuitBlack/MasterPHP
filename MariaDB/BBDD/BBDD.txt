@@ -76,3 +76,14 @@ PRIMARY KEY y FOREIGN KEY
                 SET DEFAULT: al borrar el registro se pondrá en a un valor por defecto
                 NO ACTION: No hace ninguna acción (es lo que hace si no se le indica nada)
 
+Lenguaje de manipulación de datos - DML (Data Manipulation Language)
+    El lenguaje DML sirve para ejecutar tareas de consulta y modificación de los datos contenidos en la BBDD
+    Las operaciones que podemos realizar son:
+        SELECT: extraer información en forma de consulta de nuestra BBDD.
+            SELECT * FROM usuarios;
+        INSERT: insertar datos a nuestra BBDD.
+            INSERT INTO usuarios VALUES(null,'Rosa','Pérez','rpl@gmail','1243','2024-04-01');
+            INSERT INTO usuarios(email,password) VALUES('jpp@gmail.com', '1234');
+        DELETE: borrar datos de nuestra BBDD.
+        UPDATE: actualizar los datos de los registros de nuestra BBDD. 
+
