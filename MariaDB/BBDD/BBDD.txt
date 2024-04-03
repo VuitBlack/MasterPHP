@@ -87,3 +87,36 @@ Lenguaje de manipulación de datos - DML (Data Manipulation Language)
         DELETE: borrar datos de nuestra BBDD.
         UPDATE: actualizar los datos de los registros de nuestra BBDD. 
 
+Operadores 
+    IGUAL           =
+    DISTINTO        !=
+    MENOR QUE       <
+    MAYOR QUE       >
+    MENOR O IGUAL   <=
+    MAYOR O IGUAL   >=
+    ENTRE           between A and B
+    EN              IN
+    ES NULO         ISNULL
+    NO NULO         IS NOT NULL
+    COMO            LIKE
+    NO ES COMO      NOT LIKE
+
+Operadores lógicos
+    O       OR
+    Y       AND
+    NO      NOT
+
+Comodines
+    El tanto por ciento busca cualquier cantidad de caracteres: %
+    Dos guiones bajos busca un caracter desconocido: __
+
+
+ORDER BY
+    Sirve para ordenar una consulta por un campo en concreto y se puede orenar en:
+    ASC - ascendente
+    DESC - descendente
+
+LIMIT
+    Sirve para limitar los registros a el número que le indiquemos.
+    Si le indicamos dos números te muestra los registros entre los números seleccionados
+
