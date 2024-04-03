@@ -120,3 +120,18 @@ LIMIT
     Sirve para limitar los registros a el número que le indiquemos.
     Si le indicamos dos números te muestra los registros entre los números seleccionados
 
+UPDATE:
+Sirve para actualizar REGISTROS de una tabla. s muy importante usar una condicion where porque
+si usamos solo DELETE FROM borramos todos los registros.
+
+DELETE:
+Sirve para eliminar REGISTROS de una tabla. Es muy importante usar una condicion where porque
+si usamos solo DELETE FROM borramos todos los registros.
+
+AGRUPAMIENTO:
+    COUNT: cuenta las filas de una consulta
+    AVG: saca la media
+    MAX: devuelve el valor máximo del grupo
+    MIN: devuelve el valor mínimo del grupo
+    SUM: suma todo el contenido del grupo
+
