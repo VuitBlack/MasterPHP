@@ -121,8 +121,8 @@ LIMIT
     Si le indicamos dos números te muestra los registros entre los números seleccionados
 
 UPDATE:
-Sirve para actualizar REGISTROS de una tabla. s muy importante usar una condicion where porque
-si usamos solo DELETE FROM borramos todos los registros.
+    Sirve para actualizar REGISTROS de una tabla. s muy importante usar una condicion where porque
+    si usamos solo DELETE FROM borramos todos los registros.
 
 DELETE:
 Sirve para eliminar REGISTROS de una tabla. Es muy importante usar una condicion where porque
@@ -135,3 +135,7 @@ AGRUPAMIENTO:
     MIN: devuelve el valor mínimo del grupo
     SUM: suma todo el contenido del grupo
 
+SUBCONSULTAS
+    Sirve para ejecutar consultas dentro de otras consultas, lo que hace es obtener una serie de
+    datos con la primera consulta y sobre esos datos aplicar otra consulta para realizar un
+    segundo filtro para obtener un resulado más afinado.

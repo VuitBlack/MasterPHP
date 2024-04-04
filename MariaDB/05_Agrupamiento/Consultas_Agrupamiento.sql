@@ -22,13 +22,13 @@ HAVING COUNT(titulo)>=3;
 # FUNCIONES DE AGRUPAMIENTO
 
 # Sacar una media de los ID entradas
-SELECT AVG(id) AS 'Media de Entradas' FROM entradas;
+SELECT AVG(id) AS 'id_AVG' FROM entradas;
 
 # Sacar el máximo ide y el tilulo de la tabla entradas
-SELECT MAX(id) AS 'Máximo ID', titulo FROM entradas;
+SELECT id, titulo FROM entradas WHERE id = (SELECT MAX(id) FROM entradas);
 
 # Sacar el mínimo ide y el tilulo de la tabla entradas
-SELECT MIN(id) AS 'Mínimo ID', titulo FROM entradas;
+SELECT id, titulo FROM entradas WHERE id = (SELECT MIN(id) FROM entradas);
 
 # Sacar el mínimo ide y el tilulo de la tabla entradas
-SELECT SUM(id) AS 'SUMA TOTAL ID' FROM entradas;
+SELECT SUM(id) AS "SUMA TOTAL ID's" FROM entradas;
