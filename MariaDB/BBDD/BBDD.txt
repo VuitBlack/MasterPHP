@@ -142,3 +142,26 @@ SUBCONSULTAS
     Sirve para ejecutar consultas dentro de otras consultas, lo que hace es obtener una serie de
     datos con la primera consulta y sobre esos datos aplicar otra consulta para realizar un
     segundo filtro para obtener un resulado más afinado.
+
+CONSULTAS MULTITABLA    
+    Sirven para consultar varias tablas a la vez en en una sola sentencia.
+
+INNER JOINS
+    Devuelve los registros que tienen valores identicos en dos campos de tablas diferrentes.
+
+LEFT JOIN
+    Devuelve todos los registros de la tabla a la izquierda del  =
+
+RIGTH JOIN
+    Devuelve todos los registros de la tabla a la derecha del  =
+
+VISTAS
+    Una vista es una consulta almacenada en la BBDD.
+        - Se usa como si fuese una tabla virtual.
+        - Puede tener asociaciones con una o varias tablas.
+        - No almacena los datos, trabaja sobre los datos de las tablas definidas.
+        - Siempre están actualizadas.
+
+    SHOW TABLES; Para ver la VISTA creada mostramos las tablas se almacenan ahí.
+    SELECT  Para ver el contendio de la VISTA lo hacemos igual que para una tabla
+    DROP VIEW lo usamos para eliminar la VISTA
