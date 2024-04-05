@@ -3,6 +3,9 @@ PARA ACCEDER DESDE LA CONSOLA A LA BBDD USAR EL COMANDO
 ./Applications/XAMPP/xamppfiles/bin/mariadb
 ./Applications/XAMPP/xamppfiles/bin/mysql
 
+    mysql -u root -p
+    mariadb -u root -p
+
 BBDD
 Una base de datos es un conjunto de datos perteneciente a un mismo contexto
 y almacenados sistemáticamente para su posterior uso.
