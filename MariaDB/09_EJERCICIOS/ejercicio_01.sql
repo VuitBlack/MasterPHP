@@ -118,7 +118,7 @@ INSERT INTO clientes VALUES
 
 
 SELECT * FROM clientes;
-truncate table clientes;
+# truncate table clientes;
 
 # ENCARGOS (id, cliente_id, coche_id, cantidad,fecha)
 INSERT INTO encargos VALUES
@@ -130,8 +130,8 @@ INSERT INTO encargos VALUES
     (NULL, 6, 6, 1, CURDATE());
     
 SELECT * FROM encargos;
-truncate table encargos;
+# truncate table encargos;
 
-# CONSULTA MULTITABLA PARA SABER CUANTOS VEHICULOS HA COMPRADO CADA CLIENTE
-SELECT cantidad, nombre FROM encargos, clientes 
-WHERE encargos.cliente_id=clientes.id;
+# CONSULTA MULTITABLA PARA SABER CUANTOS VEHICULOS HA COMPRADO CADA CLIENTE Y MOSTRAR MARCA Y MODELO
+SELECT cantidad, nombre, CONCAT_WS(' ',marca, modelo) as 'Marca y Modelo' FROM encargos, clientes, coches 
+WHERE encargos.cliente_id=clientes.id AND encargos.coche_id=coches.id;
