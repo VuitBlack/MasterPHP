@@ -98,12 +98,12 @@ INSERT INTO vendedores VALUES
     (NULL, 1, NULL, 'David','López', 'Responsable Tienda', CURDATE(), 30000, 4),
     (NULL, 1, 1, 'Fran','Martinez', 'Ayudante Tienda', CURDATE(), 23000,2),
     (NULL, 2, NULL, 'Nelson','Sanchez', 'Responsable Tienda', CURDATE(), 38000, 5),
-    (NULL, 1, 3, 'Jesús','López', 'Ayudante Tienda', CURDATE(), 12000, 6),
-    (NULL, 1, NULL, 'Victor','Lopez', 'Mecánico Jefe', CURDATE(), 50000, 2),
-    (NULL, 1, NULL, 'Antonio','Lopez', 'Vendedor Recambios', CURDATE(), 13000, 8),
-    (NULL, 1, NULL, 'Salvador','Lopez', 'Vendedor Experto', CURDATE(), 60000, 2),
-    (NULL, 1, NULL, 'Joaquín','Lopez', 'Ejecutivo de Cuentas', CURDATE(), 80000, 1),
-    (NULL, 1, NULL, 'Luis','Lopez', 'Ayudante Tienda', CURDATE(), 10000, 10);
+    (NULL, 2, 3, 'Jesús','López', 'Ayudante Tienda', CURDATE(), 12000, 6),
+    (NULL, 3, NULL, 'Victor','Lopez', 'Mecánico Jefe', CURDATE(), 50000, 2),
+    (NULL, 4, NULL, 'Antonio','Lopez', 'Vendedor Recambios', CURDATE(), 13000, 8),
+    (NULL, 5, NULL, 'Salvador','Lopez', 'Vendedor Experto', CURDATE(), 60000, 2),
+    (NULL, 6, NULL, 'Joaquín','Lopez', 'Ejecutivo de Cuentas', CURDATE(), 80000, 1),
+    (NULL, 6, NULL, 'Luis','Lopez', 'Ayudante Tienda', CURDATE(), 10000, 10);
 
 SELECT * FROM vendedores;
 
