@@ -1,6 +1,9 @@
 # Configuración proyecto en NetBeans
 /nbproject/private/
 
+# VSCode Workspace Configuration
+*.code-workspace
+
 # Compiled class file
 *.class
 
