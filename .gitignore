@@ -1,9 +1,6 @@
-#Configuración proyecto en NetBeans
+# Configuración proyecto en NetBeans
 /nbproject/private/
-<<<<<<< HEAD
 
-=======
->>>>>>> ae7ad7978260e455ce0f097baa64e91f17269ea6
 # Compiled class file
 *.class
 
