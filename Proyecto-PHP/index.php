@@ -61,7 +61,7 @@
                 </div>
 
                 <div id="register" class="bloque">
-                    <h3>Crear cuenta</h3>
+                    <h3>Registrarse</h3>
                     <form action="register.php" method="POST">
                          <label for="nombre">Nombre</label>
                          <input type="text" name="nombre"/>
@@ -127,8 +127,13 @@
                         </p>
                     </a>
                 </article>
-           
-            </div>
+                
+                <div id="ver_todas">
+                <a href="">Ver todas las entradas</a>
+                </div>
+                
+            </div> <!-- Fin PRINCIPAL -->
+
             <div class="clearfix"></div>
         </div>
         <!--Foot-->
