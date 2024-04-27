@@ -15,7 +15,7 @@
 
     <div id="register" class="bloque">
         <h3>Registrarse</h3>
-        <form action="register.php" method="POST">
+        <form action="registro.php" method="POST">
                 <label for="nombre">Nombre</label>
                 <input type="text" name="nombre"/>
                 
@@ -28,7 +28,7 @@
                 <label for="password">Password</label>
                 <input type="password" name="password"/>
 
-                <input type="submit" value="Registrar"/>
+                <input type="submit" name="submit" value="Registrar"/>
         </form>
     </div>
 </aside>
