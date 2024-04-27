@@ -12,4 +12,7 @@
     if (!$db){
         die("La conexión con la BBDD ha fallado: ".mysqli_connect_error());
     }
+
+    //Iniciamos la sesión.
+    session_start();
 ?>

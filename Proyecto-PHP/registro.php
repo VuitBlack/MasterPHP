@@ -1,12 +1,18 @@
 <?php
 
 if(isset($_POST)){
-    
+    //Conexión a la BBDD
+    require_once 'includes/conexion.php';
+    if(!isset($_SESSION)){
+        session_start();
+    }
+
     //Recoger los valores del formulario de registro. (OPERADOR TERNARIO)
-    $nombre = isset($_POST['nombre']) ? $_POST['nombre'] : false;
-    $apellidos = isset($_POST['apellidos']) ? $_POST['apellidos'] : false;
-    $email = isset($_POST['email']) ? $_POST['email'] : false;
-    $contraseña = isset($_POST['password']) ? $_POST['password'] : false;
+    //para securizar los datos introducidos usamos el comando "mysqli_real_escape_string"
+    $nombre = isset($_POST['nombre']) ? mysqli_real_escape_string($db, $_POST['nombre']) : false;
+    $apellidos = isset($_POST['apellidos']) ? mysqli_real_escape_string($db, $_POST['apellidos']) : false;
+    $email = isset($_POST['email']) ? mysqli_real_escape_string($db, $_POST['email']) : false;
+    $contraseña = isset($_POST['password']) ? mysqli_real_escape_string($db, $_POST['password']) : false;
 
     //Array de errores
     $errores = array();
@@ -35,20 +41,35 @@ if(isset($_POST)){
     }
     //Validar PASSWORD
     if(!empty($contraseña)){
-        $paswword_validado = true;
+        $password_validado = true;
     }else{
         $password_validado = false;
         $errores['contraseña']="Contraseña incorrecta, no cumple con los valores esperados";
     }
 
     $guardar_usuario = false;
+
     if(count($errores)==0){
         //Si el array de errores está vacío insertamos el usuario.
         $guardar_usuario = true;
+        //cifrar la contraseña
+        $password_segura = password_hash($contraseña, PASSWORD_BCRYPT, ['cost'=>4]);
+        $sql = "INSERT INTO usuarios VALUES(null, '$nombre', '$apellidos', '$email', '$password_segura', CURDATE())";
+        $guardar = mysqli_query($db, $sql);
+
+        if($guardar){
+            $_SESSION['completado']="El registro se ha completado con éxito";
+        }else{
+            $_SESSION['errores']['general']="Fallo al guardar el usuario en la BBDD!!";
+        }
+        
+
+    }else {
+        $_SESSION['errores'] = $errores;
     }
 
 }
 
-
+header('Location: index.php');
 
 ?>
