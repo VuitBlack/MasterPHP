@@ -1,5 +1,3 @@
-<?php require_once 'includes/helpers.php'; ?>
-
 <!--Sidebar-->
 <aside id="sidebar">
     <?php if(isset($_SESSION['usuario'])): ?>
