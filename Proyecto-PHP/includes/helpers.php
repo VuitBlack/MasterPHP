@@ -33,7 +33,7 @@ function getCategorias($conexion){
 }
 
 function getLastEntradas($conexion){
-    $sql = "SELECT e.*, c.* FROM entradas AS e ".
+    $sql = "SELECT e.*, c.nombre as 'categoria' FROM entradas AS e ".
            "INNER JOIN categorias AS c ON e.categoria_id = c.id ". 
            "ORDER BY e.id DESC LIMIT 4";
     $entradas = mysqli_query($conexion, $sql);

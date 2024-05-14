@@ -38,6 +38,12 @@ body {
     background-color: red;
 }
 
+.fecha{
+    color: #898989;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
 /* Cabecera */
 
 #cabecera {
