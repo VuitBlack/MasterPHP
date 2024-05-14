@@ -4,50 +4,24 @@
 <!--Main Content-->
 <div id="principal">
     <h1>Últimas entradas</h1>
+    <?php
+        $entradas = getLastEntradas($db);
+        if(!empty($entradas)):
+            while ($entrada = mysqli_fetch_assoc($entradas)):
+    ?>
+                <article class="entrada">
+                    <a href="">
+                        <h2><?=$entrada['titulo']?></h2>
+                        <p>
+                            <?=substr($entrada['descripción'], 0, 200)."..."?>
+                        </p>
+                    </a>
+                </article>
+    <?php            
+            endwhile;
+        endif;
+    ?>
     
-    <article class="entrada">
-        <a href="">
-            <h2>Título de mi entrada</h2>
-            <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in fringilla nibh, ut dapibus lectus. 
-            Nullam commodo quam vel massa malesuada, a iaculis elit imperdiet. Integer vulputate nisi a massa dapibus mattis. 
-            Suspendisse potenti. Morbi et commodo lorem, ultrices pharetra urna.
-            </p>
-        </a>
-    </article>
-
-    <article class="entrada">
-        <a href="">
-            <h2>Título de mi entrada</h2>
-            <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in fringilla nibh, ut dapibus lectus. 
-            Nullam commodo quam vel massa malesuada, a iaculis elit imperdiet. Integer vulputate nisi a massa dapibus mattis. 
-            Suspendisse potenti. Morbi et commodo lorem, ultrices pharetra urna.
-            </p>
-        </a>
-    </article>
-    
-    <article class="entrada">
-        <a href="">
-            <h2>Título de mi entrada</h2>
-            <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in fringilla nibh, ut dapibus lectus. 
-            Nullam commodo quam vel massa malesuada, a iaculis elit imperdiet. Integer vulputate nisi a massa dapibus mattis. 
-            Suspendisse potenti. Morbi et commodo lorem, ultrices pharetra urna.
-            </p>
-        </a>
-    </article>
-
-    <article class="entrada">
-        <a href="">
-            <h2>Título de mi entrada</h2>
-            <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in fringilla nibh, ut dapibus lectus. 
-            Nullam commodo quam vel massa malesuada, a iaculis elit imperdiet. Integer vulputate nisi a massa dapibus mattis. 
-            Suspendisse potenti. Morbi et commodo lorem, ultrices pharetra urna.
-            </p>
-        </a>
-    </article>
     
     <div id="ver_todas">
     <a href="">Ver todas las entradas</a>

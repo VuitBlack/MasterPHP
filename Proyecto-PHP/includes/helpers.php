@@ -26,8 +26,21 @@ function getCategorias($conexion){
     $categorias = mysqli_query($conexion, $sql);
     $result = array();
 
-    if($categorias && mysqli_num_rows($categorias) >= 1 ){
+    if($categorias && mysqli_num_rows($categorias) >= 1){
         $result = $categorias;
+    }
+    return $result;
+}
+
+function getLastEntradas($conexion){
+    $sql = "SELECT e.*, c.* FROM entradas AS e ".
+           "INNER JOIN categorias AS c ON e.categoria_id = c.id ". 
+           "ORDER BY e.id DESC LIMIT 4";
+    $entradas = mysqli_query($conexion, $sql);
+    $result = array();
+
+    if($entradas && mysqli_num_rows($entradas) >= 1){
+        $result = $entradas;
     }
     return $result;
 }
