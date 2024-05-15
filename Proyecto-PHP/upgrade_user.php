@@ -41,26 +41,33 @@ if(isset($_POST)){
     if(count($errores)==0){
         //Si el array de errores está vacío ACTUALIZAMOS el usuario.
         $guardar_usuario = true;
-
         $usuario = $_SESSION['usuario'];
-        
-        $sql = "UPDATE usuarios SET ".
-               "nombre = '$nombre', ".
-               "apellidos = '$apellidos', ".
-               "email = '$email' ".
-               "WHERE id = ".$usuario['id'];
-        $guardar = mysqli_query($db, $sql);
 
-        if($guardar){
-            $_SESSION['usuario']['nombre'] = $nombre;
-            $_SESSION['usuario']['apellidos'] = $apellidos;
-            $_SESSION['usuario']['email'] = $email;
+        // Comprobrar si el email existe en la BBDD
+        $sql = "SELECT id, email FROM usuarios where email='$email';";
+        $isset_email = mysqli_query($db, $sql);
+        $isset_user = mysqli_fetch_assoc($isset_email);
 
-            $_SESSION['completado']="La actualización se ha completado con éxito";
+        if($isset_user['id']==$usuario['id'] || empty($isset_user)){
+            $sql1 = "UPDATE usuarios SET ".
+                "nombre = '$nombre', ".
+                "apellidos = '$apellidos', ".
+                "email = '$email' ".
+                "WHERE id = ".$usuario['id'];
+            $guardar = mysqli_query($db, $sql1);
+
+            if($guardar){
+                $_SESSION['usuario']['nombre'] = $nombre;
+                $_SESSION['usuario']['apellidos'] = $apellidos;
+                $_SESSION['usuario']['email'] = $email;
+
+                $_SESSION['completado']="La actualización se ha completado con éxito";
+            }else{
+                $_SESSION['errores']['general']="Algo fallo al actualizar el usuario en la BBDD!!";
+            }
         }else{
-            $_SESSION['errores']['general']="Algo fallo al actualizar el usuario en la BBDD!!";
+            $_SESSION['errores']['general']="El usuario YA EXISTE en la BBDD!!";
         }
-        
 
     }else {
         $_SESSION['errores'] = $errores;
