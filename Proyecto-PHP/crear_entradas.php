@@ -39,7 +39,7 @@
         <input type="submit" value="Guardar" />
     </form>
     <?php borrarErrores(); ?>
+    
 </div> <!-- Fin PRINCIPAL -->
-
 
 <?php require_once 'includes/pie.php'; ?>

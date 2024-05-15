@@ -6,7 +6,7 @@
             <!-- Botones -->
             <a href="crear_entradas.php" class="boton boton-verde">Crear Entrada</a>
             <a href="crear_categoria.php" class="boton">Crear Categoría</a>
-            <a href="logout.php" class="boton boton-naranja">Mis Datos</a>
+            <a href="mis_datos.php" class="boton boton-naranja">Mis Datos</a>
             <a href="logout.php" class="boton boton-rojo">Cerrar Sesión</a>
         </div>
     <?php endif ?>
