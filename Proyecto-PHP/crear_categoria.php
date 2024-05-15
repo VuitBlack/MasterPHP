@@ -10,7 +10,7 @@
         puedan usarlas al crear sus entradas.
     </p>
     <br/>
-    <form action="guardarcategoria.php" method="post">
+    <form action="guardar_categoria.php" method="post">
         <label for="nombre">Nombre de la categoría:</label>
         <input type="text" name="nombre" />
 
