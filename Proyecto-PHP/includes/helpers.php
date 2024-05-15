@@ -12,12 +12,16 @@ function borrarErrores(){
     $borrado = false;
 
     if(isset($_SESSION['errores'])){;
+        $_SESSION['errores'] = null;            //si falla el códgio quitar está linea
         unset($_SESSION['errores']);
     }
     if(isset($_SESSION['completado'])){;
+        $_SESSION['completado'] = null;         //si falla el códgio quitar está linea
         unset($_SESSION['completado']);
     }
-
+    if(isset($_SESSION['errores_entrada'])){;
+        $_SESSION['errores_entrada'] = null;       //si falla el códgio quitar está linea
+    }
     return $borrado;
 }
 

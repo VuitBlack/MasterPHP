@@ -17,14 +17,14 @@ if(isset($_POST)){
         $titulo_validado = true;
     }else{
         $titulo_validado = false;
-        $errores['titulo']="Titulo incorrecto, no cumple con los valores esperados";
+        $errores['titulo']="Titulo incorrecto, no puede estar vacío";
     }
 
     if(!empty($descripcion)){
         $descripcion_validado = true;
     }else{
         $descripcion_validado = false;
-        $errores['descripcion']="Descripción incorrecta";
+        $errores['descripcion']="Descripción incorrecta, no puede estar vacía";
     }
 
     if(!empty($categoria) && is_numeric($categoria)){
@@ -37,9 +37,11 @@ if(isset($_POST)){
     if(count($errores)==0){
         $sql = "INSERT INTO entradas VALUES(NULL, $usuario, $categoria, '$titulo', '$descripcion', CURDATE());";
         $guardar = mysqli_query($db, $sql);
+        header("Location: index.php");
     }else{
         $_SESSION["errores_entrada"]=$errores;
+        header("Location: crear_entradas.php");
     }
 }
-header("Location: index.php");
+
 ?>
