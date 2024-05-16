@@ -37,14 +37,32 @@ function getCategorias($conexion){
     return $result;
 }
 
-function getEntradas($conexion, $limit ){
+function getCategoriaMenu($conexion, $id){
+    $sql = "SELECT * FROM categorias WHERE id = $id;";
+    $categorias = mysqli_query($conexion, $sql);
+    $result = array();
+
+    if($categorias && mysqli_num_rows($categorias) >= 1){
+        $result = mysqli_fetch_assoc($categorias);
+    }
+    return $result;
+}
+
+function getEntradas($conexion, $limit, $categoria){
     $sql = "SELECT e.*, c.nombre as 'categoria' FROM entradas AS e ".
-           "INNER JOIN categorias AS c ON e.categoria_id = c.id ". 
-           "ORDER BY e.id DESC ";
+           "INNER JOIN categorias AS c ON e.categoria_id = c.id ";
+           
+    // Concateno WHERE el ID de la categoría para obtener las entradas de esa categoría.
+    if(!empty($categoria)){
+        $sql .= "WHERE e.categoria_id = $categoria ";
+    }
+
+    $sql .= "ORDER BY e.id DESC ";
     // Concateno el límite de 4 entradas para el index si recibimos true en la variable limit.
     if($limit){
         $sql .= "LIMIT 4";
     }
+
     $entradas = mysqli_query($conexion, $sql);
     $result = array();
 
