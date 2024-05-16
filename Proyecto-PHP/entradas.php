@@ -3,9 +3,9 @@
 
 <!--Main Content-->
 <div id="principal">
-    <h1>Últimas entradas</h1>
+    <h1>Todas las entradas</h1>
     <?php
-        $entradas = getEntradas($db, true);
+        $entradas = getEntradas($db, false);
         if(!empty($entradas)):
             while ($entrada = mysqli_fetch_assoc($entradas)):
     ?>
@@ -25,7 +25,7 @@
     
     
     <div id="ver_todas">
-    <a href="entradas.php">Ver todas las entradas</a>
+    <a href="">Ver todas las entradas</a>
     </div>
     
 </div> <!-- Fin PRINCIPAL -->

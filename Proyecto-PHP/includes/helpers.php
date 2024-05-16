@@ -37,10 +37,14 @@ function getCategorias($conexion){
     return $result;
 }
 
-function getLastEntradas($conexion){
+function getEntradas($conexion, $limit ){
     $sql = "SELECT e.*, c.nombre as 'categoria' FROM entradas AS e ".
            "INNER JOIN categorias AS c ON e.categoria_id = c.id ". 
-           "ORDER BY e.id DESC LIMIT 4";
+           "ORDER BY e.id DESC ";
+    // Concateno el límite de 4 entradas para el index si recibimos true en la variable limit.
+    if($limit){
+        $sql .= "LIMIT 4";
+    }
     $entradas = mysqli_query($conexion, $sql);
     $result = array();
 
