@@ -13,12 +13,19 @@
 <div id="principal">
     <h1><?=$entrada_actual['titulo']?></h1>
     <a href="categoria.php?id=<?=$entrada_actual['categoria_id']?>">
-        <h2><?=$entrada_actual['categoria']?></h2>
+        <h2><?php echo "Categoría: "?><?=$entrada_actual['categoria']?></h2>
     </a>
-    <h4><?=$entrada_actual['fecha']?></h4>
+    <h4><?php echo "Autor: "?><?=$entrada_actual['usuario']?></h4>
+    <h4><?php echo "Fecha: "?><?=$entrada_actual['fecha']?></h4>
+    <br/>
     <p>
         <?=$entrada_actual['descripcion']?>
     </p>
+    <?php if (isset($_SESSION["usuario"]) && $_SESSION['usuario']['id'] == $entrada_actual['usuario_id']):?>
+        <br/>
+        <a href="editar_entrada.php" class="boton boton-verde">Editar Entrada</a>
+        <a href="borrar_entrada.php" class="boton boton-naranja">Borrar Entrada</a>
+    <?php endif; ?>
 </div> <!-- Fin PRINCIPAL -->
 
 
