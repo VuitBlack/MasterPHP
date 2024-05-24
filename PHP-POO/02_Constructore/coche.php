@@ -59,5 +59,19 @@ public function __construct($marca, $modelo, $color, $velocidad, $hp, $plazas) {
     public function setMarca($marca){
         $this->marca=$marca;
     }
+
+    public function mostrarInformacion(Coche $miObjeto){
+        if(is_object($miObjeto)){
+            $informacion = "<h1>Información del coche</h1>";
+            $informacion .= "Color: ".$miObjeto->color;
+            $informacion .= "<br/>Modelo: ".$miObjeto->modelo;
+            $informacion .= "<br/>Velocidad: ".$miObjeto->velocidad;
+        }else{
+            $informacion = "Tu datp es este: ".$miObjeto;
+        }
+
+        return $informacion;
+    }
+
 }
 ?>

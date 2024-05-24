@@ -10,9 +10,11 @@ $coche_5 = new Coche("Ford", "Fiesta", "Azul", 140, 80, 4);
 $coche_1->color="Rosa";
 $coche_1->setMarca("Audi");
 
-var_dump($coche_1->getModelo());
+echo $coche_1->mostrarInformacion($coche_2);
 
-var_dump($coche_1);
+// var_dump($coche_1->getModelo());
+
+// var_dump($coche_1);
 // var_dump($coche_2);
 // var_dump($coche_3);
 // var_dump($coche_4);
