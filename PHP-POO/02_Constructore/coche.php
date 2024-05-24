@@ -4,9 +4,13 @@
 // Definir una clase (molde para crear mas objetos de tipo coche con características similares)
 class Coche{
 
-    // Atributos o propiedades (variables), se pueden crear en una línea separada por comas.
-    public string $marca ;
-    public string $modelo;
+    //  Atributos o propiedades (variables), se pueden crear en una línea separada por comas.
+    //  Public: podemos acceder a estos atributos desde cualquier lugar, dentro de la clase actual
+    //  dentro de la clases que hereden está clase o fuera de la clase.
+    //  Protected: se puede acceder desde la clase que los defie y desde clases que hereden está clase.
+    //  Private: unicamente se puede acceder a ellos desde la clase que los define.
+    protected string $marca ;
+    private string $modelo;
     public string $color;
     public int $velocidad;
     public int $hp;
@@ -44,8 +48,16 @@ public function __construct($marca, $modelo, $color, $velocidad, $hp, $plazas) {
         return $this->velocidad;
     }
 
+    public function getModelo(){
+        return $this->modelo;
+    }
+
     public function setModelo($modelo){
         $this->modelo=$modelo;
+    }
+
+    public function setMarca($marca){
+        $this->marca=$marca;
     }
 }
 ?>
