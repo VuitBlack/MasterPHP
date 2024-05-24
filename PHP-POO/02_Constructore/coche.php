@@ -5,12 +5,22 @@
 class Coche{
 
     // Atributos o propiedades (variables), se pueden crear en una línea separada por comas.
-    public $marca = "Ferrari";
-    public $modelo = "Aventador";
-    public $color = "Rojo";
-    public $velocidad = 300;
-    public $caballaje = 500;
-    public $plazas = 2;
+    public string $marca ;
+    public string $modelo;
+    public string $color;
+    public int $velocidad;
+    public int $hp;
+    public int $plazas;
+
+    // Constructor
+public function __construct($marca, $modelo, $color, $velocidad, $hp, $plazas) {
+        $this->marca = $marca;
+        $this->modelo = $modelo;
+        $this->color = $color;
+        $this->velocidad = $velocidad;
+        $this->hp = $hp;
+        $this->plazas = $plazas;
+    }
 
     // Métodos son acciones que puede hacer una clase (antes funciones)
     public function getColor(){
@@ -38,30 +48,4 @@ class Coche{
         $this->modelo=$modelo;
     }
 }
-
-// CREAR UN OBJETO O INSTANCIAR LA CLASE
-
-$coche = new Coche();
-
-// Usar MÉTODOS.
-echo $coche->getVelocidad().'<br/>';
-
-$coche->setColor("Amarillo");
-echo "El color del coche es: ".$coche->getColor().'<br/>';
-
-$coche->acelerar();
-$coche->acelerar();
-$coche->acelerar();
-$coche->acelerar();
-$coche->frenar();
-echo "La velocidad del coche es: ".$coche->getVelocidad().'<br/>';
-
-$coche2 = new Coche();
-$coche2->setColor("Verde");
-$coche2->setModelo("Gallardo");
-
-
-var_dump($coche);
-var_dump($coche2);
-
 ?>
