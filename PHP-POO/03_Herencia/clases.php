@@ -70,6 +70,11 @@ class Informatico extends Persona{
     public $lenguajes;
     public $experienciaProgramador;
 
+    public function __construct(){
+        $this->lenguajes="HTML, CSS y JS";
+        $this->experienciaProgramador=10;
+    }
+
     public function sabeLenguajes($lenguajes){
         $this->lenguajes=$lenguajes;
         return $this->lenguajes;
@@ -92,6 +97,13 @@ class TecnicoRedes extends Informatico{
     
     public $auditarRedes;
     public $experienciaRedes;
+
+    public function __construct(){
+        parent::__construct();    // Con la sentencia "parent::" llamamos al constructor de la clase padre.
+
+        $this->auditarRedes="Experto";
+        $this->experienciaRedes=5;
+    }
 
     public function auditoria() {
         return "Estoy auditando una red";
