@@ -9,6 +9,8 @@ class Usuario{
         $this->nombre="Ricardo Sandoval";
         $this->email="ricardo@ricardo.com";
     }
+
+    
 }
 
 ?>
