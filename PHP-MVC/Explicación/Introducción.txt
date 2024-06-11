@@ -1,0 +1,28 @@
+https://victorroblesweb.es/2013/11/18/tutorial-mvc-en-php-nativo/
+
+El MVC separa la lógica de negocio de la interface de usuario, es uno de los patrones de diseño
+mas usados, favorece para no mezclar lenguajes de programacion ejemplo php y sql etc.
+
+NIVELES DE ABSTRACCIÓN
+    
+    El MODELO: es la lógica de negocio, clases y métodos que se comunican con la BBDD, o hacen funcionalidad o lógica compleja.
+
+    La VISTA: es la encargada de mostrar la información al usuario de forma gráfica.
+
+    El CONTROLADOR: el intermediario entre la vista y el modelo, se encarga de controlar la interacciones del usuario con la vista. El controlador crea objetos, llama métodos y recibe datos de formularios y enviar datos a la vista.
+
+COMO FUNCIONA EL MVC
+El funcionamiento básico del patrón MVC, es:
+
+    1- El usuario realiza una petición.
+    2- El controlador captura la petición.
+    3- Hace la llamada al modelo correspondiente.
+    4- El modelo sera el encargado de interactuar con la base de datos.
+    5- El controlador recibe la información y la enviá a la vista.
+    6- La vista muestra la información.
+
+
+
+
+
+
