@@ -7,17 +7,16 @@ class Usuario extends ModeloBase{
     public $email;
     public $password;
 
-    /**
-     * Get the value of nombre
-     */
+    public function __construct()
+    {
+        parent::__construct();
+    }
+
     public function getNombre()
     {
         return $this->nombre;
     }
 
-    /**
-     * Set the value of nombre
-     */
     public function setNombre($nombre): self
     {
         $this->nombre = $nombre;
@@ -25,17 +24,11 @@ class Usuario extends ModeloBase{
         return $this;
     }
 
-    /**
-     * Get the value of apellidos
-     */
     public function getApellidos()
     {
         return $this->apellidos;
     }
 
-    /**
-     * Set the value of apellidos
-     */
     public function setApellidos($apellidos): self
     {
         $this->apellidos = $apellidos;
@@ -43,17 +36,11 @@ class Usuario extends ModeloBase{
         return $this;
     }
 
-    /**
-     * Get the value of email
-     */
     public function getEmail()
     {
         return $this->email;
     }
 
-    /**
-     * Set the value of email
-     */
     public function setEmail($email): self
     {
         $this->email = $email;
@@ -61,17 +48,11 @@ class Usuario extends ModeloBase{
         return $this;
     }
 
-    /**
-     * Get the value of password
-     */
     public function getPassword()
     {
         return $this->password;
     }
 
-    /**
-     * Set the value of password
-     */
     public function setPassword($password): self
     {
         $this->password = $password;
