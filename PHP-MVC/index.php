@@ -8,8 +8,7 @@ http://localhost:3000/PHP-MVC/?controller=Nota&action=list
 
 <?php
 
-require_once 'controllers/UsuarioController.php';
-require_once 'controllers/NotaController.php';
+require_once 'AutoLoad.php';
 
 // Se crea la variable fuera del if para que la comprobación de la clase funcione.
 if(isset($_GET['controller'])){
