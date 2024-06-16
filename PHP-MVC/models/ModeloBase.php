@@ -10,8 +10,9 @@ class ModeloBase{
         $this->db = database::connect();    
     }
 
-    public function getAll(){
-        return "Obteniendo todos los DATOS de la BBDD.";
+    public function getAll($tabla){
+        $query=$this->db->query("SELECT * FROM $tabla ORDER BY id DESC");
+        return $query;
     }
 }
 

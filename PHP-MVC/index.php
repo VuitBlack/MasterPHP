@@ -2,6 +2,7 @@
 http://localhost:3000/PHP-MVC/?controller=Usuario&action=getAll
 http://localhost:3000/PHP-MVC/?controller=Usuario&action=addUser
 http://localhost:3000/PHP-MVC/?controller=Nota&action=list
+http://localhost:3000/PHP-MVC/?controller=Nota&action=create
 -->
 
 <h1>Bienvenido a mi web con MCV</h1>
