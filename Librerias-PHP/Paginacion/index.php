@@ -6,9 +6,11 @@ require_once '../vendor/autoload.php';
 $conexion=new mysqli("localhost", "root","root","notas_mvc");
 $conexion->query("SET NAMES 'utf8'");
 
-//Consulta a contar elementos a paginar
+//Consulta a contar elementos totales
 $consulta = $conexion->query("SELECT COUNT(id) as 'total' FROM notas");
 $numero_elementos = $consulta->fetch_object()->total;
+
+//Numero de elementos por pagina
 $num_element_pagina = 2;
 
 //Hago la paginación

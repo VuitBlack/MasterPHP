@@ -939,7 +939,11 @@ class Zebra_Pagination {
             // otherwise, get the current query string, if any, and transform it to an array
             } else {
 
-                parse_str($_SERVER['QUERY_STRING'], $query);
+                //Cambiando la línea por la que me da el soporte de ZEBRA funciona dejo comentada la línea original.
+                
+                //parse_str($_SERVER['QUERY_STRING'], $query); 
+
+                parse_str(isset($_SERVER['QUERY_STRING']) ? $_SERVER['QUERY_STRING'] : '', $query);
 
             }
 
