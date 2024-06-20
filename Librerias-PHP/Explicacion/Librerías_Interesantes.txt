@@ -1,0 +1,15 @@
+Librerías:
+    - Excel -> Crear, Leer y Modificar archivos Excel.
+        composer require phpoffice/phpspreadsheet
+
+    - Email -> Creación de Emails.
+        composer require phpmailer/phpmailer
+
+    - Email -> Email usada con symfony
+        composer require symfony/mailer
+
+    - Plantillas -> Plantillas flexibles, rápidas y seguras en PHP
+        composer require twig/twig
+    
+    - Acelerar sitos Web -> Reduce las llamadas a la BBDD usando cache del sistema.
+        composer require phpfastcache/phpfastcache
