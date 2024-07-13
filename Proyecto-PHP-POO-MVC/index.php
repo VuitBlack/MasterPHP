@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="utf-8" />
-        <title>Tienda de Camisetas</title>
-        <link rel="stylesheet" href="Assets/css/styles.css"/>
-    </head>
-    <body>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Tienda de Camisetas</title>
+    <link rel="stylesheet" href="Assets/css/styles.css" />
+</head>
+
+<body>
+    <div id="container">
         <!-- HEADER -->
         <header id="header">
             <div id="logo">
-                <img src="Assets/img/Camiseta_3.png" alt="Camiseta Logo"/>
+                <img src="Assets/img/Camiseta_3.png" alt="Camiseta Logo" />
                 <a href="index.php">
                     Tienda de Camisetas
                 </a>
             </div>
         </header>
         <!-- MENU -->
-         <nav id="menu">
+        <nav id="menu">
             <ul>
                 <li>
                     <a href="#">Inicio</a>
@@ -37,18 +40,18 @@
                     <a href="#">Categoría 5</a>
                 </li>
             </ul>
-         </nav>
+        </nav>
 
-         <div id="content">
+        <div id="content">
             <!-- SIDE BAR -->
             <aside id="lateral">
                 <div id="login" class="block_aside">
                     <form action="#" method="post">
                         <label for="email">Email</label>
-                        <input type="email" name="email"/>
+                        <input type="email" name="email" />
                         <label for="password">Password</label>
-                        <input type="password" name="password"/>
-                        <input type="submit" value="Enviar"/>
+                        <input type="password" name="password" />
+                        <input type="submit" value="Enviar" />
                     </form>
                     <div id="icono">
                         <img src="Assets/img/usuario_ico.png" alt="Usuario_icono">
@@ -68,32 +71,33 @@
             <!-- MAIN BODY -->
             <div id="central">
                 <div class="product">
-                    <img src="Assets/img/Camiseta_2.png"/>
+                    <img src="Assets/img/Camiseta_2.png" />
                     <h2>Camiseta de Manta Oceánica</h2>
                     <p>30€</p>
                     <a href="#">Comprar</a>
                 </div>
                 <div class="product">
-                    <img src="Assets/img/Camiseta_1.png"/>
+                    <img src="Assets/img/Camiseta_1.png" />
                     <h2>Camiseta de Pelícano</h2>
                     <p>30€</p>
                     <a href="#">Comprar</a>
                 </div>
                 <div class="product">
-                    <img src="Assets/img/Camiseta_3.png"/>
+                    <img src="Assets/img/Camiseta_3.png" />
                     <h2>Camiseta de Pingüino</h2>
                     <p>30€</p>
                     <a href="#">Comprar</a>
                 </div>
 
             </div>
-         </div>
+        </div>
 
         <!-- FOOTER -->
-         <footer id="footer">
-            <p>Desarrollado por Ricardo Sandoval &copy; <?=date('Y')?></p>
-         </footer>
+        <footer id="footer">
+            <p>Desarrollado por Ricardo Sandoval &copy; <?= date('Y') ?></p>
+        </footer>
 
-    </body>
+    </div>
+</body>
 
 </html>
