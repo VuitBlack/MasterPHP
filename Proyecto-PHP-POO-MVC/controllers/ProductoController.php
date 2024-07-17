@@ -2,7 +2,7 @@
 
 class productoController{
     public function index(){
-        echo "Controlador de PRODUCTO acción INDEX";
+        require_once 'views/producto/destacados.php';
     }
 }
 

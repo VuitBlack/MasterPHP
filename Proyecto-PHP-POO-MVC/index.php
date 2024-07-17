@@ -1,6 +1,9 @@
 <?php
 
 require_once 'AutoLoad.php';
+require_once 'views/layout/header.php';
+require_once 'views/layout/sidebar.php';
+
 
 // Se crea la variable fuera del if para que la comprobación de la clase funcione.
 if(isset($_GET['controller'])){
@@ -27,5 +30,6 @@ if(isset($nameController) && class_exists($nameController))
     echo 'La página que buscas no existe.';
 }
 
+require_once 'views/layout/footer.php';
 
 ?>
