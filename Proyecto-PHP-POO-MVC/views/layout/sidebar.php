@@ -12,19 +12,19 @@
         <ul>
             <li>
                 <div id="icono">
-                    <img src="Assets/img/usuario_ico.png" alt="Usuario_icono">
+                    <img src="<?=base_url?>Assets/img/usuario_ico.png" alt="Usuario_icono">
                     <a href="#">Mis Pedidos</a>
                 </div>
             </li>
             <li>
                 <div id="icono">
-                    <img src="Assets/img/gestion_ped_ico.png" alt="Pedido_icono">
+                    <img src="<?=base_url?>Assets/img/gestion_ped_ico.png" alt="Pedido_icono">
                     <a href="#">Gestionar Pedidos</a>
                 </div>
             </li>
             <li>
                 <div id="icono">
-                    <img src="Assets/img/candado_ico.png" alt="Categorias_icono">
+                    <img src="<?=base_url?>Assets/img/candado_ico.png" alt="Categorias_icono">
                     <a href="#">Gestionar Categorías</a>
                 </div>
             </li>

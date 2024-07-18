@@ -1,35 +1,49 @@
+<!-- 
+    URL DE LA WEB 
+    
+    http://localhost/masterphp/Proyecto-PHP-POO-MVC/        
+-->
+
 <?php
 
 require_once 'AutoLoad.php';
+require_once 'config/parameters.php';
 require_once 'views/layout/header.php';
 require_once 'views/layout/sidebar.php';
 
+function show_error(){
+    $error = new errorController();
+    $error->index();
+}
 
 // Se crea la variable fuera del if para que la comprobación de la clase funcione.
-if(isset($_GET['controller'])){
-    $nameController = $_GET['controller'].'Controller';
-}else{
-    echo 'La página que buscas no existe.';
+if (isset($_GET['controller'])) {
+    $nameController = $_GET['controller'] . 'Controller';
+
+} elseif(!isset($_GET['controller']) && !isset($_GET['action'])){
+    $nameController = controller_default;
+
+} else {
+    show_error();
     exit();
 }
 
-if(isset($nameController) && class_exists($nameController))
-{
+if (class_exists($nameController)) {
     $controller = new $nameController();
 
-    if(isset($_GET['action']) && method_exists($controller, $_GET['action']))
-    {
-        $action=$_GET['action'];
+    if (isset($_GET['action']) && method_exists($controller, $_GET['action'])) {
+        $action = $_GET['action'];
         $controller->$action();
-    }else
-    {
-        echo 'La página que buscas no existe.';
+
+    } elseif(!isset($_GET['controller']) && !isset($_GET['action'])){
+        $action_default = action_default;
+        $controller->$action_default();
+
+    } else {
+        show_error();
     }
-}else
-{
-    echo 'La página que buscas no existe.';
+} else {
+    show_error();
 }
 
 require_once 'views/layout/footer.php';
-
-?>
