@@ -1,6 +1,12 @@
 <h1>Registro de USUARIO</h1>
 
-<form action="index.php?controller=usuario&action=save" method="POST">
+<?php if(isset($_SESSION['register']) && $_SESSION['register']=='complete'): ?>
+    <strong>Registro completado CORRECTAMENTE</strong>
+<?php else:?>
+    <strong>Registro FALLIDO</strong>
+<?php endif;?>
+
+<form action="<?=base_url?>usuario/save" method="POST">
     <label for="nombre">Nombre</label>
     <input type="text" name="nombre" required/>
 

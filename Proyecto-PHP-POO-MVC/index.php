@@ -1,12 +1,13 @@
 <!-- 
     URL DE LA WEB 
-    
+
     http://localhost/masterphp/Proyecto-PHP-POO-MVC/        
 -->
 
 <?php
-
+session_start();
 require_once 'AutoLoad.php';
+require_once 'config/db.php';
 require_once 'config/parameters.php';
 require_once 'views/layout/header.php';
 require_once 'views/layout/sidebar.php';
