@@ -37,6 +37,29 @@ class usuarioController{
         }
         header("Location:".base_url.'usuario/registro');
     }
+
+    public function login(){
+        if(isset($_POST)){
+            // Identificar al usuario
+            // Consulta a BBDD para comprobar las credenciales y crear su sesión.
+            $usuario = new Usuario();
+            $usuario->setEmail($_POST['email']);
+            $usuario->setPassword($_POST['password']);
+
+            $identity = $usuario->login();
+
+            if($identity && is_object($identity)){
+                $_SESSION['identity']=$identity;
+
+                if($identity->role =='admin'){
+                    $_SESSION['admin'] = true;
+                }
+            }else{
+                $_SESSION['error_loing'] = 'Identificación fallida !!';
+            }
+        }
+        header("Location:".base_url);
+    }
 }
 
 ?>
