@@ -19,6 +19,15 @@ a:visited{
 a:hover{
     color: #555555;
 }
+
+.alert_green{
+    color:rgb(29, 189, 29);
+}
+
+.alert_red{
+    color:red;
+}
+
 /* CONTAINER */
 #container{
     width: 80%;
