@@ -17,31 +17,40 @@
             <h3>ADMIN: <?=$_SESSION['admin']->nombre ?> <?=$_SESSION['admin']->apellidos ?></h3>
         <?php endif; ?>
         <ul>
-            <li>
-                <div id="icono">
-                    <img src="<?=base_url?>Assets/img/usuario_ico.png" alt="Usuario_icono">
-                    <a href="#">Mis Pedidos</a>
-                </div>
-            </li>
-            <li>
-                <div id="icono">
-                    <img src="<?=base_url?>Assets/img/gestion_ped_ico.png" alt="Pedido_icono">
-                    <a href="#">Gestionar Pedidos</a>
-                </div>
-            </li>
-            <li>
-                <div id="icono">
-                    <img src="<?=base_url?>Assets/img/categorias_ico.png" alt="Categorias_icono">
-                    <a href="#">Gestionar Categorías</a>
-                </div>
-            </li>
-            <li>
-            <div id="icono">
-                    <img src="<?=base_url?>Assets/img/candado_ico.png" alt="Categorias_icono">
-                    <a href="<?=base_url?>usuario/logout">Cerrar sesión</a>
-                </div>    
-            
-            </li>
+            <?php if(isset($_SESSION['admin'])): ?>
+                <li>
+                    <div id="icono">
+                        <img src="<?=base_url?>Assets/img/categorias_ico.png" alt="Gest_Categ_ico">
+                        <a href="#">Gestionar Categorías</a>
+                    </div>
+                </li>
+                <li>
+                    <div id="icono">
+                        <img src="<?=base_url?>Assets/img/gestion_produc_ico.png" alt="Gest_Produc_ico">
+                        <a href="#">Gestionar Productos</a>
+                    </div>
+                </li>
+                <li>
+                    <div id="icono">
+                        <img src="<?=base_url?>Assets/img/gestion_ped_ico.png" alt="Gest_Pedido_ico">
+                        <a href="#">Gestionar Pedidos</a>
+                    </div>
+                </li>
+            <?php endif; ?>
+            <?php if(isset($_SESSION['identity']) || isset($_SESSION['admin'])): ?>
+                <li>
+                    <div id="icono">
+                        <img src="<?=base_url?>Assets/img/pedidos_ico.png" alt="MisPedidos_ico">
+                        <a href="#">Mis Pedidos</a>
+                    </div>
+                </li>
+                <li>
+                    <div id="icono">
+                        <img src="<?=base_url?>Assets/img/candado_ico.png" alt="Cerrar_ico">
+                        <a href="<?=base_url?>usuario/logout">Cerrar sesión</a>
+                    </div>    
+                </li>
+            <?php endif; ?>
         </ul>
     </div>
 </aside>
