@@ -9,9 +9,12 @@
             <label for="password">Password</label>
             <input type="password" name="password" />
             <input type="submit" value="Enviar" />
-        </form>
-        <?php else: ?>
+        </form>  
+        <!-- Compruebo si la sesión esta iniciada como usuario o adminiatrador y lo identifico en el mensaje -->  
+        <?php elseif(isset($_SESSION['identity'])&& !isset($_SESSION['admin'])): ?>
             <h3><?=$_SESSION['identity']->nombre ?> <?=$_SESSION['identity']->apellidos ?></h3>
+        <?php else: ?>
+            <h3>ADMIN: <?=$_SESSION['admin']->nombre ?> <?=$_SESSION['admin']->apellidos ?></h3>
         <?php endif; ?>
         <ul>
             <li>
@@ -28,9 +31,16 @@
             </li>
             <li>
                 <div id="icono">
-                    <img src="<?=base_url?>Assets/img/candado_ico.png" alt="Categorias_icono">
+                    <img src="<?=base_url?>Assets/img/categorias_ico.png" alt="Categorias_icono">
                     <a href="#">Gestionar Categorías</a>
                 </div>
+            </li>
+            <li>
+            <div id="icono">
+                    <img src="<?=base_url?>Assets/img/candado_ico.png" alt="Categorias_icono">
+                    <a href="<?=base_url?>usuario/logout">Cerrar sesión</a>
+                </div>    
+            
             </li>
         </ul>
     </div>
