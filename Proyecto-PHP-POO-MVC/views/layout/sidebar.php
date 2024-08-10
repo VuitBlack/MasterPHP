@@ -1,20 +1,26 @@
 <!-- SIDE BAR -->
 <aside id="lateral">
     <div id="login" class="block_aside">
+        <div id="error login" class="error">
+        <?php if(isset($_SESSION['error_login'])): ?>
+            <?php echo $_SESSION['error_login']; ?>
+            <?php unset($_SESSION['error_login']); ?>
+        <?php endif; ?>
+        </div>
         <?php if(!isset($_SESSION['identity'])): ?>
-        <h3>Accede a la WEB</h3>
-        <form action="<?=base_url ?>usuario/login" method="post">
-            <label for="email">Email</label>
-            <input type="email" name="email" />
-            <label for="password">Password</label>
-            <input type="password" name="password" />
-            <input type="submit" value="Enviar" />
-        </form>  
+            <h3>Accede a la WEB</h3>
+            <form action="<?=base_url ?>usuario/login" method="post">
+                <label for="email">Email</label>
+                <input type="email" name="email" required/>
+                <label for="password">Password</label>
+                <input type="password" name="password" required />
+                <input type="submit" value="Login" />
+            </form>  
         <!-- Compruebo si la sesión esta iniciada como usuario o adminiatrador y lo identifico en el mensaje -->  
-        <?php elseif(isset($_SESSION['identity'])&& !isset($_SESSION['admin'])): ?>
+        <?php elseif(isset($_SESSION['identity']) && !isset($_SESSION['admin'])): ?>
             <h3><?=$_SESSION['identity']->nombre ?> <?=$_SESSION['identity']->apellidos ?></h3>
-        <?php else: ?>
-            <h3>ADMIN: <?=$_SESSION['admin']->nombre ?> <?=$_SESSION['admin']->apellidos ?></h3>
+        <?php elseif(isset($_SESSION['identity']) && isset($_SESSION['admin'])): ?>
+            <h3>ADMIN: <?=$_SESSION['identity']->nombre ?> <?=$_SESSION['identity']->apellidos ?></h3>   
         <?php endif; ?>
         <ul>
             <?php if(isset($_SESSION['admin'])): ?>

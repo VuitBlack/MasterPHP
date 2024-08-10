@@ -59,7 +59,7 @@ class Usuario
 
     public function getPassword()
     {
-        return password_hash($this->db->real_escape_string($this->password), PASSWORD_BCRYPT,['cost'=>4]);
+        return password_hash($this->db->real_escape_string($this->password), PASSWORD_BCRYPT, ['cost' => 4]);
     }
 
     public function setPassword($password): self
@@ -93,40 +93,39 @@ class Usuario
         return $this;
     }
 
-    public function save(){
+    public function save()
+    {
         $sql = "INSERT INTO usuarios VALUES(NULL, '{$this->getNombre()}', '{$this->getApellidos()}', '{$this->getEmail()}', '{$this->getPassword()}', 'user',  NULL);";
         $save = $this->db->query($sql);
 
         $result = false;
 
-        if($save){
+        if ($save) {
             $result = true;
         }
         return $result;
     }
 
-    public function login(){
+    public function login()
+    {
         $result = false;
         $email = $this->email;
         $password = $this->password;
-        
+
         //comprobar si existe el usuario.
         $sql = "SELECT * FROM usuarios WHERE email='$email';";
         $login = $this->db->query($sql);
-        
-        if($login && $login->num_rows == 1){
+
+        if ($login && $login->num_rows == 1) {
             $usuario = $login->fetch_object(); //Obtengo el objeto que me ha devuelto la BBDD en la consulta anterior.
 
             //Verificar contraseña
-            $verify = password_verify($password, $usuario->password); 
+            $verify = password_verify($password, $usuario->password);
 
-            if($verify){
+            if ($verify) {
                 $result = $usuario;
             }
         }
         return $result;
-
     }
 }
-
-?>

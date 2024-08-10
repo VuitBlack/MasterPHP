@@ -47,17 +47,16 @@ class usuarioController{
             $usuario->setPassword($_POST['password']);
 
             $identity = $usuario->login();
-            $adminIdentity = $usuario->login();
-
+            
             if($identity && is_object($identity)){
                 $_SESSION['identity']=$identity;
-           
+
                 if($identity->rol == 'admin'){
-                    $_SESSION['admin'] = $adminIdentity;
+                    $_SESSION['admin'] = true;
                 }
 
             }else{
-                $_SESSION['error_loing'] = 'Identificación fallida !!';
+                $_SESSION['error_login'] = 'Identificación fallida !!';
             }
             header("Location:".base_url);
         }
