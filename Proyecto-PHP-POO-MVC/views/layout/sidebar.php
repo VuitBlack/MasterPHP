@@ -27,7 +27,7 @@
                 <li>
                     <div id="icono">
                         <img src="<?=base_url?>Assets/img/categorias_ico.png" alt="Gest_Categ_ico">
-                        <a href="#">Gestionar Categorías</a>
+                        <a href="<?=base_url?>categoria/index">Gestionar Categorías</a>
                     </div>
                 </li>
                 <li>
@@ -54,6 +54,13 @@
                     <div id="icono">
                         <img src="<?=base_url?>Assets/img/candado_ico.png" alt="Cerrar_ico">
                         <a href="<?=base_url?>usuario/logout">Cerrar sesión</a>
+                    </div>    
+                </li>
+            <?php else: ?>    
+                <li>
+                    <div id="icono">
+                        <img src="<?=base_url?>Assets/img/SignIN_ico.png" alt="SingIN_ico">
+                        <a href="<?=base_url?>usuario/registro">Sign in</a>
                     </div>    
                 </li>
             <?php endif; ?>

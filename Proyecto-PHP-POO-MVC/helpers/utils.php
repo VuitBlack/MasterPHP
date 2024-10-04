@@ -8,4 +8,14 @@ class Utils{
         }
         return $name;
     }
+
+    //FUNCION PARA COMPROBAR SI UN USUARIO ES ADMINISTRADOR
+    public static function isAdmin(){
+        //Si no es administrador te saca al "index.php"
+        if(!isset($_SESSION['admin'])){
+            header("Location:".base_url);
+        }else{
+            return true;
+        }
+    }
 }

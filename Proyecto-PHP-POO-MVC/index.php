@@ -1,7 +1,9 @@
 <!-- 
     URL DE LA WEB 
 
-    http://localhost/masterphp/Proyecto-PHP-POO-MVC/        
+    http://localhost/masterphp/Proyecto-PHP-POO-MVC/   
+
+    Las contraseña encriptada de todos los usuarios son: 1234     
 -->
 
 <?php
