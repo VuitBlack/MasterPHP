@@ -1,4 +1,4 @@
-<h1>Gestionar categorias</h1>
+<h1>Gestión de categorias</h1>
 
 <a href="<?=base_url?>categoria/crear" class="button button-small">
     Crear categoría

@@ -33,7 +33,7 @@
                 <li>
                     <div id="icono">
                         <img src="<?=base_url?>Assets/img/gestion_produc_ico.png" alt="Gest_Produc_ico">
-                        <a href="#">Gestionar Productos</a>
+                        <a href="<?=base_url?>producto/gestion">Gestionar Productos</a>
                     </div>
                 </li>
                 <li>
