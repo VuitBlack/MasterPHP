@@ -7,18 +7,20 @@
 <?php endif;?>
 <?php Utils::deleteSession(('register'));?>
 
-<form action="<?=base_url?>usuario/save" method="POST">
-    <label for="nombre">Nombre</label>
-    <input type="text" name="nombre"/>
+<div class="form_container">
+    <form action="<?=base_url?>usuario/save" method="POST">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre"/>
 
-    <label for="apellidos">Apellidos</label>
-    <input type="text" name="apellidos" />
+        <label for="apellidos">Apellidos</label>
+        <input type="text" name="apellidos" />
 
-    <label for="email">Email</label>
-    <input type="email" name="email" />
+        <label for="email">Email</label>
+        <input type="email" name="email" />
 
-    <label for="password">Password</label>
-    <input type="password" name="password" />
+        <label for="password">Password</label>
+        <input type="password" name="password" />
 
-    <input type="submit" value="Registrarse" />
-</form>
+        <input type="submit" value="Registrarse" />
+    </form>
+</div>

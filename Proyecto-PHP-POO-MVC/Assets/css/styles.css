@@ -164,22 +164,46 @@ td{
     background: #E1E1E1;
     border-bottom: 2px solid #01B1EA;
 }
+#lateral ul{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#lateral ul li{
+    list-style: none;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+#lateral ul li a{
+    margin-left: 3px;
+}
+
+#icono img{
+    width: 18px;
+}
 
 /* FORMS */
+.form_container{
+    width: 50%;
+}
+
 label,
 input[type="text"],
 input[type="password"],
 input[type="email"],
-select{
+input[type="number"],
+select, textarea {
     display: block;
     width: 95%;
     margin-top: 2px;
     margin-bottom: 2px;
 }
+
 input[type="text"],
 input[type="password"],
 input[type="email"],
-select{
+input[type="number"],
+select, textarea {
     border: 1px solid #C9C9C9;
     box-shadow: 0px 0px 2px #CCC inset;
     background: white;
@@ -228,23 +252,7 @@ button{
     display: block;
     margin-top: 10px;
 }
-#lateral ul{
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-#lateral ul li{
-    list-style: none;
-    margin-left: 10px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-#lateral ul li a{
-    margin-left: 3px;
-}
 
-#icono img{
-    width: 18px;
-}
 
 /* MAIN BODY */
 #central{
