@@ -24,7 +24,7 @@
             <td><?=$prod->id;?></td>
             <td><?=$prod->nombre;?></td>
             <td><?=$prod->precio;?></td>
-            <td><?=$prod->stock;?></td>      
+            <td><?=$prod->stock;?></td>    
         </tr>
     <?php endwhile; ?>
 </table>

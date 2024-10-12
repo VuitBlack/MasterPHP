@@ -35,7 +35,6 @@ class productoController{
             $precio = isset($_POST['precio']) ? $_POST['precio'] : false;
             $stock = isset($_POST['stock']) ? $_POST['stock'] : false;
             $categoria = isset($_POST['categoria']) ? $_POST['categoria'] : false;
-            // $imagen = isset($_POST['imagen']) ? $_POST['imagen'] : false;
 
             if($nombre && $descripcion && $precio && $stock && $categoria){
                 $producto = new Producto();
@@ -45,9 +44,26 @@ class productoController{
                 $producto->setStock($stock);
                 $producto->setCategoriaId($categoria);
 
-                $save = $producto->save();
-                if($save){
-                    $_SESSION['producto'] = "complete";
+            //Guardar la imagen del producto
+                $file = $_FILES['imagen'];
+                $filename = $file['name'];
+                $mimetype = $file['type'];
+
+                if($mimetype == "image/jpg" || $mimetype == "image/jpeg" || $mimetype == "image/png" || $mimetype == "image/gif" || $mimetype == "image/bmp" || $mimetype == "image/webp"){
+                    
+                    if(!is_dir('uploads/images')){
+                        mkdir('uploads/images',0777,true);
+                    }
+                    $producto->setImagen($filename);
+                    move_uploaded_file($file['tmp_name'],'uploads/images/'.$filename);
+
+                    //Guardar el producto
+                    $save = $producto->save();
+                    if($save){
+                        $_SESSION['producto'] = "complete";
+                    }else{
+                        $_SESSION['producto'] = "failed";
+                    }
                 }else{
                     $_SESSION['producto'] = "failed";
                 }
