@@ -1,5 +1,5 @@
 <?php
-
+//
 class Usuario
 {
     private $id;
@@ -23,36 +23,36 @@ class Usuario
 
     public function getNombre()
     {
-        return $this->nombre;
+        return $this->db->real_escape_string($this->nombre);
     }
 
     public function setNombre($nombre): self
     {
-        $this->nombre = $this->db->real_escape_string($nombre);
+        $this->nombre = $nombre;
 
         return $this;
     }
 
     public function getApellidos()
     {
-        return $this->apellidos;
+        return $this->db->real_escape_string($this->apellidos);
     }
 
     public function setApellidos($apellidos): self
     {
-        $this->apellidos = $this->db->real_escape_string($apellidos);
+        $this->apellidos = $apellidos;
 
         return $this;
     }
 
     public function getEmail()
     {
-        return $this->email;
+        return $this->db->real_escape_string($this->email);
     }
 
     public function setEmail($email): self
     {
-        $this->email = $this->db->real_escape_string($email);
+        $this->email = $email;
 
         return $this;
     }
