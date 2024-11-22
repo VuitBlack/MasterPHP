@@ -23,36 +23,36 @@ class Usuario
 
     public function getNombre()
     {
-        return $this->db->real_escape_string($this->nombre);
+        return $this->nombre;
     }
 
     public function setNombre($nombre): self
     {
-        $this->nombre = $nombre;
+        $this->nombre = $this->db->real_escape_string($nombre);
 
         return $this;
     }
 
     public function getApellidos()
     {
-        return $this->db->real_escape_string($this->apellidos);
+        return $this->apellidos;
     }
 
     public function setApellidos($apellidos): self
     {
-        $this->apellidos = $apellidos;
+        $this->apellidos = $this->db->real_escape_string($apellidos);
 
         return $this;
     }
 
     public function getEmail()
     {
-        return $this->db->real_escape_string($this->email);
+        return $this->email;
     }
 
     public function setEmail($email): self
     {
-        $this->email = $email;
+        $this->email = $this->db->real_escape_string($email);
 
         return $this;
     }
