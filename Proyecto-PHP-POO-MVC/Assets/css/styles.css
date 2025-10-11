@@ -234,7 +234,7 @@ button, .button{
 }
 
 .button{
-    background: #2979CD;
+    
     color: white !important;
     text-decoration: none;
 }
@@ -243,6 +243,16 @@ button, .button{
     width: 120px;
     text-align: center;
     margin-bottom: 20px;
+}
+
+.button-gestion{
+    margin-top: 5px; 
+    margin-bottom: 5px;
+}
+
+.button-red{
+    background: rgb(180, 0, 0);
+    border: 1px solid orange;
 }
 
 label,
