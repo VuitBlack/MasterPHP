@@ -187,6 +187,11 @@ class Producto
         return $productos;
     }
 
+    public function getOne(){
+        $producto = $this->db->query("SELECT * FROM productos WHERE id={$this->getId()}");
+        return $producto->fetch_object();
+    }
+
     public function save()
     {
         $sql = "INSERT INTO productos VALUES(NULL, '{$this->getCategoriaId()}', '{$this->getNombre()}', '{$this->getDescripcion()}', {$this->getPrecio()}, {$this->getStock()}, NULL, CURDATE(), '{$this->getImagen()}');";
@@ -199,6 +204,25 @@ class Producto
         echo $this->db->error;
         die();
         */
+
+        $result = false;
+
+        if ($save) {
+            $result = true;
+        }
+        return $result;
+    }
+
+        public function edit()
+    {
+        $sql = "UPDATE productos SET categoria_id='{$this->getCategoriaId()}', nombre='{$this->getNombre()}', descripcion='{$this->getDescripcion()}', precio={$this->getPrecio()}, stock={$this->getStock()}";
+        
+        //Comprobamos si llega una imagen en caso afirmativo se introduce mediante la concatenación
+        if ($this->getImagen() != null){
+            $sql .= ", imagen='{$this->getImagen()}'";
+        }
+        $sql .=  " WHERE id={$this->id};";
+        $save = $this->db->query($sql);
 
         $result = false;
 
