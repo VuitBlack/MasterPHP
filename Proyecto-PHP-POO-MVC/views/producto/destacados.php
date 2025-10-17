@@ -1,6 +1,6 @@
 <h1>Algunos de nuestros productos</h1>
 
-    <?php while($produt = $productos->fetch_object()): ?>
+<?php while($produt = $productos->fetch_object()): ?>
     <div class="product">
         <?php if($produt->imagen !=null): ?>
             <img src="<?=base_url?>uploads/images/<?=$produt->imagen?>" />
@@ -11,5 +11,5 @@
         <p><?=$produt->precio?></p>
         <a href="#" class="button">Comprar</a>
     </div>
-    
-    <?php endwhile; ?>
+
+<?php endwhile; ?>
