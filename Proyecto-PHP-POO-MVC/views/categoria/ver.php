@@ -15,7 +15,7 @@
                     <?php endif; ?>
                     <h2><?= $produt->nombre ?></h2>
                 </a>
-                <p><?= $produt->precio ?></p>
+                <p><?= $produt->precio ?> €</p>
                 <a href="#" class="button">Comprar</a>
             </div>
 
