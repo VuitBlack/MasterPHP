@@ -5,8 +5,9 @@
     <?php else: ?>
         <?php while ($produt = $productos->fetch_object()): ?>
 
+
             <div class="product">
-                <a href="<?= base_url ?>producto/ver&id=<? $product->id ?>">
+                <a href="<?= base_url ?>producto/ver&id=<?= $produt->id ?>">
                     <?php if ($produt->imagen != null): ?>
                         <img src="<?= base_url ?>uploads/images/<?= $produt->imagen ?>" />
                     <?php else: ?>
@@ -17,6 +18,7 @@
                 <p><?= $produt->precio ?></p>
                 <a href="#" class="button">Comprar</a>
             </div>
+
         <?php endwhile; ?>
 
     <?php endif; ?>

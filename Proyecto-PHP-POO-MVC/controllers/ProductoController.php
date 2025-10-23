@@ -16,10 +16,10 @@ class productoController{
         if(isset($_GET['id'])){
             $id = $_GET['id'];
 
-            $producto = new Producto;
+            $producto = new Producto();
             $producto->setId($id);
             
-            $pro = $producto->getOne();
+            $product = $producto->getOne();
         }
         require_once 'views/producto/ver.php';
 
