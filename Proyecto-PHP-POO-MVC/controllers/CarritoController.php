@@ -17,9 +17,16 @@ class carritoController
             header('Location:' . base_url);
         }
         if (isset($_SESSION['carrito'])) {
+            $counter = 0;
+            foreach($_SESSION['carrito'] as $indice => $elemento) {
+                if($elemento['id_producto'] == $producto_id) {
+                    $_SESSION['carrito'][$indice]['unidades']++;
+                    $counter++;
+                }
+            }
 
-            
-        } else {
+        }
+        if(!isset($counter) || $counter == 0) {
             //Conseguir producto
             $producto = new Producto();
             $producto->setId($producto_id);
