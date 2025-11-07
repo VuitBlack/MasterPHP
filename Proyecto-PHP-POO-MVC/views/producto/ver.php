@@ -6,7 +6,7 @@
             <?php if ($product->imagen != null): ?>
                 <img src="<?= base_url ?>uploads/images/<?= $product->imagen ?>" />
             <?php else: ?>
-                <img src="<?= base_url ?>Assets/img/Camiseta_1.png" />
+                <img src="<?= base_url ?>Assets/img/Cubo_Rubik.png" />
             <?php endif; ?>
         </div>
         <div class="data">

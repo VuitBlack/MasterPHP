@@ -5,8 +5,13 @@ class carritoController
 {
     public function index()
     {
-        var_dump($_SESSION['carrito']);
-        echo "Controlador de Carrito acción INDEX";
+        if(isset($_SESSION['carrito'])){
+            $carrito = $_SESSION['carrito'];
+        
+        require_once 'views/carrito/index.php';
+        }else{
+            require_once 'views/carrito/CarritoVacio.php';
+        }
     }
 
     public function add()
@@ -41,7 +46,7 @@ class carritoController
                 );
             }
         }
-        header('Location:' . base_url . "carrito/index");
+        header('Location:' . base_url . "carrito/index.php");
     }
 
     public function remove() {}
@@ -49,6 +54,6 @@ class carritoController
     public function delete_all()
     {
         unset($_SESSION['carrito']);
-        header('Location:' . base_url . "carrito/index");
+        header('Location:' . base_url . "carrito/index.php");
     }
 }

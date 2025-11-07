@@ -1,5 +1,15 @@
 <!-- SIDE BAR -->
 <aside id="lateral">
+
+    <div id="carrito" class="block_aside">
+        <h3>Cesta</h3>
+        <ul>
+            <?php $stats=Utils::statsCarrito();?>
+            <li><a href="<?=base_url?>carrito/index">Nº Productos: <?=$stats['count']?></a></li>
+            <li><a href="<?=base_url?>carrito/index">Total: <?=$stats['total']?>€</a></li>
+            <li><a href="<?=base_url?>carrito/index">Ver la Cesta</a></li>
+        </ul>
+    </div>
     <div id="login" class="block_aside">
         <div id="error login" class="error">
         <?php if(isset($_SESSION['error_login'])): ?>

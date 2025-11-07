@@ -44,7 +44,7 @@ a:hover{
 table{
     text-align: center;
     width: 100%;
-    border: 1px solid #555;
+    border-bottom: 1px solid #555;
 }
 
 td{
@@ -98,6 +98,23 @@ td{
 
 #logo a:hover{
     text-shadow: 0px 2px 1px #222222, 0px 0px 6px #01B1EA;
+}
+
+#carrito_Vacio img{
+    height: 400px;
+    display: block;
+    margin: 10px auto;
+}
+#carrito_Vacio h3{
+    display: block;
+    color: #222222;
+    width: 100%;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-bottom: 60px;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 /* MENU */
@@ -314,6 +331,12 @@ button{
     margin-bottom: 10px;
 }
 
+.img_carrito{
+    height: 80px;
+    display: block;
+    margin: 10px auto;
+}
+
 .product h2{
     font-size: 18px;
     margin-bottom: 10px;
@@ -363,4 +386,22 @@ button{
     color: white;
     background: #222222;
     border-top: 5px solid #01B1EA;
+}
+
+/* CARRITO */
+.total-carrito{
+    width: 320px;
+    float: right;
+}
+
+.total-carrito h3{
+    display: block;
+    float: left;
+    margin-top: 5px;
+}
+
+.button-pedido{
+    display: block;
+    float: right;
+    margin-right: 20px;
 }
