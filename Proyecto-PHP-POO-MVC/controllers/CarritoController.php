@@ -7,8 +7,8 @@ class carritoController
     {
         if(isset($_SESSION['carrito'])){
             $carrito = $_SESSION['carrito'];
-        
-        require_once 'views/carrito/index.php';
+            require 'views/carrito/index.php';
+
         }else{
             require_once 'views/carrito/CarritoVacio.php';
         }
@@ -20,16 +20,16 @@ class carritoController
             $producto_id = $_GET['id'];
         } else {
             header('Location:' . base_url);
+            exit;
         }
         if (isset($_SESSION['carrito'])) {
             $counter = 0;
             foreach($_SESSION['carrito'] as $indice => $elemento) {
                 if($elemento['id_producto'] == $producto_id) {
-                    $_SESSION['carrito'][$indice]['unidades']++;
-                    $counter++;
+                    $_SESSION['carrito'][$indice]['unidades']++;   //Abro la sesión  'carrito' tomo el 'indice' y en 'uniades' añado una con  ++
+                    $counter++;     //incremento el contador 
                 }
             }
-
         }
         if(!isset($counter) || $counter == 0) {
             //Conseguir producto
@@ -46,7 +46,8 @@ class carritoController
                 );
             }
         }
-        header('Location:' . base_url . "carrito/index.php");
+        header('Location:' . base_url . 'carrito/index');
+        exit;
     }
 
     public function remove() {}
@@ -54,6 +55,7 @@ class carritoController
     public function delete_all()
     {
         unset($_SESSION['carrito']);
-        header('Location:' . base_url . "carrito/index.php");
+        header('Location:' . base_url . 'carrito/index');
+        exit;
     }
 }

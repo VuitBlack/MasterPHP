@@ -7,6 +7,8 @@
 -->
 
 <?php
+ob_start(); // <--- AÑADE ESTA LÍNEA AL PRINCIPIO
+
 session_start();
 require_once 'AutoLoad.php';
 require_once 'config/db.php';
@@ -51,3 +53,5 @@ if (class_exists($nameController)) {
 }
 
 require_once 'views/layout/footer.php';
+
+ob_end_flush();
