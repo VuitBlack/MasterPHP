@@ -49,8 +49,10 @@ class carritoController
         header('Location:' . base_url . 'carrito/index');
         exit;
     }
-
-    public function remove() {}
+    
+    public function remove() {
+        
+    }
 
     public function delete_all()
     {

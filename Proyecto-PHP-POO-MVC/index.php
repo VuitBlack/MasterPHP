@@ -7,7 +7,7 @@
 -->
 
 <?php
-ob_start(); // <--- AÑADE ESTA LÍNEA AL PRINCIPIO
+ob_start(); // activa el buffer de salida en el archivo principal. Esto le dice a PHP: 'Guarda todo el HTML en una memoria temporal y no lo envía al navegador hasta el final'.
 
 session_start();
 require_once 'AutoLoad.php';
@@ -54,4 +54,4 @@ if (class_exists($nameController)) {
 
 require_once 'views/layout/footer.php';
 
-ob_end_flush();
+ob_end_flush(); // Finaliza el buffer de salida y desactiva el almacenamiento temporal.
