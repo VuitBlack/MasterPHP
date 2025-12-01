@@ -31,7 +31,9 @@ class pedidoController{
 
             //Guardar el pedido en la base de datos
             $save = $pedido->save();
-                if ($save) {
+            $save_linea = $pedido->save_linea();
+
+                if ($save && $save_linea) {
                     $_SESSION['pedido'] = "complete";
                 }else{
                     $_SESSION['pedido'] = "failed";
@@ -39,12 +41,25 @@ class pedidoController{
             }else{
                 $_SESSION['pedido'] = "failed";
             }
+            header("Location:".base_url.'pedido/confirmado');
+            
         }else{
             // Si no está identificado, redirige a la página de inicio
-            header("Location: " . base_url);
+            header("Location:".base_url);
         }
+        
+    }
+
+    public function confirmado(){
+        if(isset($_SESSION['identity'])){
+            $identity = $_SESSION['identity'];
+            $pedido = new Pedido();
+            $pedido->setUsuarioId($identity->id);
+            $pedido = $pedido->getOneByUser();
+        }
+        
+        require_once 'views/pedido/confirmado.php';
     }
 
 }
-
 ?>

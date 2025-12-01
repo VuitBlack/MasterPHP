@@ -99,6 +99,12 @@ class Pedido
         $pedido = $this->db->query("SELECT * FROM pedidos WHERE id={$this->getId()}");
         return $pedido->fetch_object();
     }
+
+    public function getOneByUser(){
+        $sql = "SELECT * FROM pedidos WHERE usuario_id = {$this->getUsuarioId()} ORDER BY id DESC LIMIT 1";
+        $pedido = $this->db->query($sql);
+        return $pedido->fetch_object();
+    }
      
     public function save(){
         $sql = "INSERT INTO pedidos VALUES(NULL, '{$this->getUsuarioId()}', '{$this->getProvincia()}', '{$this->getLocalidad()}', '{$this->getDireccion()}', {$this->getCoste()}, 'Confirm', CURDATE(), CURTIME());";
@@ -120,7 +126,22 @@ class Pedido
         return $result;
     }
 
-    
+    public function save_linea(){
+        $sql = "SELECT LAST_INSERT_ID() as 'pedido';";
+        $query = $this->db->query($sql);
+        $pedido_id = $query->fetch_object()->pedido;
 
+        foreach ($_SESSION['carrito'] as $elemento) {
+            $producto = $elemento['producto'];
+            $insert = "INSERT INTO lineas_pedidos VALUES(NULL, {$pedido_id}, {$producto->id}, {$elemento['unidades']});";
+            $save = $this->db->query($insert);
+        }
+
+        $result = false;
+        if ($save) {
+            $result = true;
+        }
+        return $result;
+    }
 
 }

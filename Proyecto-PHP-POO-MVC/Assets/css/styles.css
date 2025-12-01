@@ -1,34 +1,35 @@
 /* GENERALES */
-*{
+* {
     padding: 0px;
     margin: 0px;
     font-family: sans-serif, Helvetica, Arial;
 }
 
-body{
+body {
     background: url(../img/Fondo_1.png);
 }
 
-a{
+a {
     color: #01B1EA;
 }
 
-a:visited{
+a:visited {
     color: #01B1EA;
 }
-a:hover{
+
+a:hover {
     color: #555555;
 }
 
-.alert_green{
-    color:rgb(29, 189, 29);
+.alert_green {
+    color: rgb(29, 189, 29);
 }
 
-.alert_red{
-    color:red;
+.alert_red {
+    color: red;
 }
 
-.error{
+.error {
     display: block;
     color: red;
     width: 100%;
@@ -41,23 +42,23 @@ a:hover{
     background: #E1E1E1;
 }
 
-table{
+table {
     text-align: center;
     width: 100%;
     border-bottom: 1px solid #555;
 }
 
-td{
+td {
     border-top: 1px solid #ccc;
     padding: 2px;
 }
 
-.thumb{
+.thumb {
     width: 100px;
 }
 
 /* CONTAINER */
-#container{
+#container {
     width: 80%;
     margin: 0px auto;
     box-shadow: 0px 0px 10px gray;
@@ -65,23 +66,23 @@ td{
 }
 
 /* HEADER */
-#header{
+#header {
     height: 145px;
     background: #F0F0F0;
 }
 
-#logo{
+#logo {
     float: left;
     padding: 20px;
     margin-left: 20px;
 }
 
-#logo img{
+#logo img {
     float: left;
     height: 100px;
 }
 
-#logo a{
+#logo a {
     float: left;
     font-size: 40px;
     letter-spacing: 4px;
@@ -96,16 +97,17 @@ td{
     transition: all 300ms;
 }
 
-#logo a:hover{
+#logo a:hover {
     text-shadow: 0px 2px 1px #222222, 0px 0px 6px #01B1EA;
 }
 
-#carrito_Vacio img{
+#carrito_Vacio img {
     height: 400px;
     display: block;
     margin: 10px auto;
 }
-#carrito_Vacio h3{
+
+#carrito_Vacio h3 {
     display: block;
     color: #222222;
     width: 100%;
@@ -119,25 +121,28 @@ td{
 
 /* MENU */
 
-#menu{
-    clear:both;
+#menu {
+    clear: both;
     background: #222222;
     color: white;
     height: 55px;
     border-bottom: 4px solid #01B1EA;
 }
-#menu ul{
+
+#menu ul {
     list-style: none;
     text-decoration: none;
     margin: 0px auto;
     margin-left: 25px;
 }
-#menu ul li{
+
+#menu ul li {
     line-height: 55px;
     float: left;
     border-right: 1px solid #363636;
 }
-#menu a{
+
+#menu a {
     display: block;
     color: white;
     text-decoration: none;
@@ -145,19 +150,22 @@ td{
     padding-right: 15px;
     transition: all 300ms;
 }
-#menu a:first-child{
+
+#menu a:first-child {
     border-left: 1px solid #363636;
 }
-#menu a:hover{
+
+#menu a:hover {
     background: #01B1EA;
 }
 
 /* CONTENT */
-#content{
+#content {
     margin: 0px auto;
     overflow: hidden;
     background: white;
 }
+
 /* SIDEBAR */
 #lateral {
     width: 24%;
@@ -166,13 +174,15 @@ td{
     margin-top: 20px;
     margin-left: 10px;
 }
-#lateral .block_aside{
+
+#lateral .block_aside {
     display: block;
     width: 90%;
     margin: 5px auto;
     padding: 10px;
 }
-#lateral h3{
+
+#lateral h3 {
     display: block;
     color: #222222;
     width: 100%;
@@ -185,26 +195,29 @@ td{
     background: #E1E1E1;
     border-bottom: 2px solid #01B1EA;
 }
-#lateral ul{
+
+#lateral ul {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-#lateral ul li{
+
+#lateral ul li {
     list-style: none;
     margin-left: 10px;
     margin-top: 5px;
     margin-bottom: 5px;
 }
-#lateral ul li a{
+
+#lateral ul li a {
     margin-left: 3px;
 }
 
-#icono img{
+#icono img {
     width: 18px;
 }
 
 /* FORMS */
-.form_container{
+.form_container {
     width: 50%;
 }
 
@@ -213,7 +226,8 @@ input[type="text"],
 input[type="password"],
 input[type="email"],
 input[type="number"],
-select, textarea {
+select,
+textarea {
     display: block;
     width: 95%;
     margin-top: 2px;
@@ -224,7 +238,8 @@ input[type="text"],
 input[type="password"],
 input[type="email"],
 input[type="number"],
-select, textarea {
+select,
+textarea {
     border: 1px solid #C9C9C9;
     box-shadow: 0px 0px 2px #CCC inset;
     background: white;
@@ -232,16 +247,19 @@ select, textarea {
     color: gray;
     transition: all 300ms;
 }
+
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="email"]:focus,
-select{
+select {
     border: 1px solid #1579B5;
     color: black;
 }
+
 input[type="button"],
 input[type="submit"],
-button, .button{
+button,
+.button {
     display: block;
     border-radius: 2px;
     width: auto;
@@ -254,24 +272,24 @@ button, .button{
     cursor: pointer;
 }
 
-.button{
-    
+.button {
+
     color: white !important;
     text-decoration: none;
 }
 
-.button-small{
+.button-small {
     width: 120px;
     text-align: center;
     margin-bottom: 20px;
 }
 
-.button-gestion{
-    margin-top: 5px; 
+.button-gestion {
+    margin-top: 5px;
     margin-bottom: 5px;
 }
 
-.button-red{
+.button-red {
     background: rgb(180, 0, 0);
     border: 1px solid orange;
 }
@@ -279,14 +297,14 @@ button, .button{
 label,
 input[type="button"],
 input[type="submit"],
-button{
+button {
     display: block;
     margin-top: 10px;
 }
 
 
 /* MAIN BODY */
-#central{
+#central {
     width: 70%;
     min-height: 500px;
     float: right;
@@ -295,7 +313,7 @@ button{
     padding: 25px;
 }
 
-#central h1{
+#central h1 {
     font-size: 24px;
     font-weight: normal;
     letter-spacing: 1px;
@@ -308,7 +326,7 @@ button{
 
 /* PRODUCTOS */
 
-.product{
+.product {
     width: 30%;
     float: left;
     margin-left: 10px;
@@ -317,69 +335,76 @@ button{
     text-align: center;
 }
 
-.product a{
+.product a {
     color: black;
     text-decoration: none;
 }
 
-.product a:hover{
+.product a:hover {
     color: #555;
 }
 
-.product img{
+.product img {
     height: 120px;
     margin-bottom: 10px;
 }
 
-.img_carrito{
+.img_carrito {
     height: 80px;
     display: block;
     margin: 10px auto;
 }
 
-.product h2{
+.product h2 {
     font-size: 18px;
     margin-bottom: 10px;
 }
-.product p{
+
+.product p {
     font-weight: bold;
     color: #555;
     margin-bottom: 10px;
 }
 
-#detail-product{
+#detail-product {
     width: 100%;
 }
-#detail-product .image{
+
+#detail-product .image {
     display: block;
     width: 40%;
     float: left;
     margin-right: 40px;
 }
-#detail-product img{
+
+#detail-product img {
     display: block;
     width: 100%;
     float: left;
 }
-#detail-product .data{
+
+#detail-product .data {
     width: 50%;
     float: right;
 }
-#detail-product .description{
+
+#detail-product .description {
     margin-bottom: 20px;
 }
-#detail-product .price{
+
+#detail-product .price {
     margin-bottom: 10px;
     font-size: 20px;
     color: 444;
 }
-#detail-product .button{
+
+#detail-product .button {
     width: 200px;
     text-align: center;
 }
 
 /* FOOTER */
-#footer{
+#footer {
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -389,19 +414,641 @@ button{
 }
 
 /* CARRITO */
-.total-carrito{
+.total-carrito {
     width: 320px;
     float: right;
 }
 
-.total-carrito h3{
+.total-carrito h3 {
     display: block;
     float: left;
     margin-top: 5px;
 }
 
-.button-pedido{
+.button-pedido {
+    display: block;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    border: 1px solid #C9C9C9;
+    box-shadow: 0px 0px 2px #CCC inset;
+    background: white;
+    padding: 2px;
+    color: gray;
+    transition: all 300ms;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+select {
+    border: 1px solid #1579B5;
+    color: black;
+}
+
+input[type="button"],
+input[type="submit"],
+button,
+.button {
+    display: block;
+    border-radius: 2px;
+    width: auto;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+    background: #2979CD;
+    border: 1px solid #11608E;
+    cursor: pointer;
+}
+
+.button {
+
+    color: white !important;
+    text-decoration: none;
+}
+
+.button-small {
+    width: 120px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.button-gestion {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.button-red {
+    background: rgb(180, 0, 0);
+    border: 1px solid orange;
+}
+
+label,
+input[type="button"],
+input[type="submit"],
+button {
+    display: block;
+    margin-top: 10px;
+}
+
+
+/* MAIN BODY */
+#central {
+    width: 70%;
+    min-height: 500px;
+    float: right;
+    border-left: 1px solid #CCC;
+    box-shadow: -5px -1px 5px #DDD;
+    padding: 25px;
+}
+
+#central h1 {
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-align: center;
+    border-bottom: 1px solid #CCC;
+    margin-bottom: 20px;
+    padding: 20px;
+    padding-top: 0px;
+}
+
+/* PRODUCTOS */
+
+.product {
+    width: 30%;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.product a {
+    color: black;
+    text-decoration: none;
+}
+
+.product a:hover {
+    color: #555;
+}
+
+.product img {
+    height: 120px;
+    margin-bottom: 10px;
+}
+
+.img_carrito {
+    height: 80px;
+    display: block;
+    margin: 10px auto;
+}
+
+.product h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.product p {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+#detail-product {
+    width: 100%;
+}
+
+#detail-product .image {
+    display: block;
+    width: 40%;
+    float: left;
+    margin-right: 40px;
+}
+
+#detail-product img {
+    display: block;
+    width: 100%;
+    float: left;
+}
+
+#detail-product .data {
+    width: 50%;
+    float: right;
+}
+
+#detail-product .description {
+    margin-bottom: 20px;
+}
+
+#detail-product .price {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: 444;
+}
+
+#detail-product .button {
+    width: 200px;
+    text-align: center;
+}
+
+/* FOOTER */
+#footer {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    background: #222222;
+    border-top: 5px solid #01B1EA;
+}
+
+/* CARRITO */
+.total-carrito {
+    width: 320px;
+    float: right;
+}
+
+.total-carrito h3 {
+    display: block;
+    float: left;
+    margin-top: 5px;
+}
+
+.button-pedido {
+    display: block;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    border: 1px solid #C9C9C9;
+    box-shadow: 0px 0px 2px #CCC inset;
+    background: white;
+    padding: 2px;
+    color: gray;
+    transition: all 300ms;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+select {
+    border: 1px solid #1579B5;
+    color: black;
+}
+
+input[type="button"],
+input[type="submit"],
+button,
+.button {
+    display: block;
+    border-radius: 2px;
+    width: auto;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+    background: #2979CD;
+    border: 1px solid #11608E;
+    cursor: pointer;
+}
+
+.button {
+
+    color: white !important;
+    text-decoration: none;
+}
+
+.button-small {
+    width: 120px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.button-gestion {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.button-red {
+    background: rgb(180, 0, 0);
+    border: 1px solid orange;
+}
+
+label,
+input[type="button"],
+input[type="submit"],
+button {
+    display: block;
+    margin-top: 10px;
+}
+
+
+/* MAIN BODY */
+#central {
+    width: 70%;
+    min-height: 500px;
+    float: right;
+    border-left: 1px solid #CCC;
+    box-shadow: -5px -1px 5px #DDD;
+    padding: 25px;
+}
+
+#central h1 {
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-align: center;
+    border-bottom: 1px solid #CCC;
+    margin-bottom: 20px;
+    padding: 20px;
+    padding-top: 0px;
+}
+
+/* PRODUCTOS */
+
+.product {
+    width: 30%;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.product a {
+    color: black;
+    text-decoration: none;
+}
+
+.product a:hover {
+    color: #555;
+}
+
+.product img {
+    height: 120px;
+    margin-bottom: 10px;
+}
+
+.img_carrito {
+    height: 80px;
+    display: block;
+    margin: 10px auto;
+}
+
+.product h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.product p {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+#detail-product {
+    width: 100%;
+}
+
+#detail-product .image {
+    display: block;
+    width: 40%;
+    float: left;
+    margin-right: 40px;
+}
+
+#detail-product img {
+    display: block;
+    width: 100%;
+    float: left;
+}
+
+#detail-product .data {
+    width: 50%;
+    float: right;
+}
+
+#detail-product .description {
+    margin-bottom: 20px;
+}
+
+#detail-product .price {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: 444;
+}
+
+#detail-product .button {
+    width: 200px;
+    text-align: center;
+}
+
+/* FOOTER */
+#footer {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    background: #222222;
+    border-top: 5px solid #01B1EA;
+}
+
+/* CARRITO */
+.total-carrito {
+    width: 320px;
+    float: right;
+}
+
+.total-carrito h3 {
+    display: block;
+    float: left;
+    margin-top: 5px;
+}
+
+.button-pedido {
+    display: block;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    border: 1px solid #C9C9C9;
+    box-shadow: 0px 0px 2px #CCC inset;
+    background: white;
+    padding: 2px;
+    color: gray;
+    transition: all 300ms;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+select {
+    border: 1px solid #1579B5;
+    color: black;
+}
+
+input[type="button"],
+input[type="submit"],
+button,
+.button {
+    display: block;
+    border-radius: 2px;
+    width: auto;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+    background: #2979CD;
+    border: 1px solid #11608E;
+    cursor: pointer;
+}
+
+.button {
+
+    color: white !important;
+    text-decoration: none;
+}
+
+.button-small {
+    width: 120px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.button-gestion {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.button-red {
+    background: rgb(180, 0, 0);
+    border: 1px solid orange;
+}
+
+label,
+input[type="button"],
+input[type="submit"],
+button {
+    display: block;
+    margin-top: 10px;
+}
+
+
+/* MAIN BODY */
+#central {
+    width: 70%;
+    min-height: 500px;
+    float: right;
+    border-left: 1px solid #CCC;
+    box-shadow: -5px -1px 5px #DDD;
+    padding: 25px;
+}
+
+#central h1 {
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-align: center;
+    border-bottom: 1px solid #CCC;
+    margin-bottom: 20px;
+    padding: 20px;
+    padding-top: 0px;
+}
+
+/* PRODUCTOS */
+
+.product {
+    width: 30%;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.product a {
+    color: black;
+    text-decoration: none;
+}
+
+.product a:hover {
+    color: #555;
+}
+
+.product img {
+    height: 120px;
+    margin-bottom: 10px;
+}
+
+.img_carrito {
+    height: 80px;
+    display: block;
+    margin: 10px auto;
+}
+
+.product h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.product p {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+#detail-product {
+    width: 100%;
+}
+
+#detail-product .image {
+    display: block;
+    width: 40%;
+    float: left;
+    margin-right: 40px;
+}
+
+#detail-product img {
+    display: block;
+    width: 100%;
+    float: left;
+}
+
+#detail-product .data {
+    width: 50%;
+    float: right;
+}
+
+#detail-product .description {
+    margin-bottom: 20px;
+}
+
+#detail-product .price {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: 444;
+}
+
+#detail-product .button {
+    width: 200px;
+    text-align: center;
+}
+
+/* FOOTER */
+#footer {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    background: #222222;
+    border-top: 5px solid #01B1EA;
+}
+
+/* CARRITO */
+.total-carrito {
+    width: 320px;
+    float: right;
+}
+
+.total-carrito h3 {
+    display: block;
+    float: left;
+    margin-top: 5px;
+}
+
+.button-pedido {
     display: block;
     float: right;
     margin-right: 20px;
+}
+
+/* CONFIRMADO */
+.total-confirmado {
+    width: 320px;
+    margin: 10px auto;
+    text-align: center;
+    float: none;
+}
+
+.total-confirmado h3 {
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
+.texto-confirmado {
+    color: #044269;
+    text-align: left;
+    padding: 20px;
+}
+
+.resumen-pedido {
+    width: 70%;
+    margin: 10px auto;
+    text-align: center;
+    float: none;
+    border-radius: 10px;
+    background: linear-gradient(to top, rgba(186, 229, 255, 0.1), rgba(41, 121, 205, 0.5));
+    box-shadow: 0px 0px 10px #2979CD;
+}
+
+.button-confirmado {
+    display: block;
+    width: 70%;
+    align-items: right;
+    margin: 10px auto;
 }
