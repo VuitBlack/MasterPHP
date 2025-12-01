@@ -4,8 +4,12 @@
     <br/>
     <p>Gracias por tu pedido. Tan pronto como realices el pago, procederemos a procesarlo y realizar el envío.</p>
     <p>Este es el resumen de tu pedido:</p>
+
     <h3>Tu pedido contiene <?php echo count($_SESSION['carrito']); ?> productos:</h3>
-    <div class="resumen-pedido">
+    <div class="resumen-pedido" >
+        <div class="texto-confirmado" style="color: black">
+            <p><h4>El pedido se ha creado con el ID: <?php echo $pedido->id; ?></h4></p>
+        </div>
         <br/>
         <table>
             <tr>

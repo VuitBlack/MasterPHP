@@ -105,7 +105,13 @@ class Pedido
         $pedido = $this->db->query($sql);
         return $pedido->fetch_object();
     }
-     
+    
+    public function getProductosByPedido($id){
+        $sql = "SELECT * FROM lineas_pedidos WHERE pedido_id = {$id}";
+        $productos = $this->db->query($sql);
+        return $productos;
+    }
+    
     public function save(){
         $sql = "INSERT INTO pedidos VALUES(NULL, '{$this->getUsuarioId()}', '{$this->getProvincia()}', '{$this->getLocalidad()}', '{$this->getDireccion()}', {$this->getCoste()}, 'Confirm', CURDATE(), CURTIME());";
         $save = $this->db->query($sql);
