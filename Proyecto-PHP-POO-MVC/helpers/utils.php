@@ -22,6 +22,17 @@ class Utils
         }
     }
 
+     //FUNCION PARA COMPROBAR SI UN USUARIO ESTA LOGGEADO
+    public static function isIdentity()
+    {
+        //Si no esta loggeado te saca al "index.php"
+        if (!isset($_SESSION['identity'])) {
+            header("Location:" . base_url);
+        } else {
+            return true;
+        }
+    }
+
     public static function showCategorias()
     {
         require_once 'models/categoria.php';

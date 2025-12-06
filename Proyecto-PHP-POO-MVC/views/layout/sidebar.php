@@ -49,7 +49,7 @@
                 <li>
                     <div id="icono">
                         <img src="<?=base_url?>Assets/img/gestion_ped_ico.png" alt="Gest_Pedido_ico">
-                        <a href="#">Gestionar Pedidos</a>
+                        <a href="<?=base_url?>pedido/gestion">Gestionar Pedidos</a>
                     </div>
                 </li>
             <?php endif; ?>
@@ -57,7 +57,7 @@
                 <li>
                     <div id="icono">
                         <img src="<?=base_url?>Assets/img/pedidos_ico.png" alt="MisPedidos_ico">
-                        <a href="#">Mis Pedidos</a>
+                        <a href="<?=base_url?>pedido/mis_pedidos">Mis Pedidos</a>
                     </div>
                 </li>
                 <li>

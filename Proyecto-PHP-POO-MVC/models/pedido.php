@@ -150,4 +150,10 @@ class Pedido
         return $result;
     }
 
+    public function getAllByUser(){
+        $sql = "SELECT * FROM pedidos WHERE usuario_id = {$this->getUsuarioId()} ORDER BY id DESC";
+        $pedido = $this->db->query($sql);
+        return $pedido;
+    }
+
 }
