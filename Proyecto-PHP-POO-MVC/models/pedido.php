@@ -107,10 +107,6 @@ class Pedido
     }
     
     public function getProductosByPedido($id){
-        /*$sql = "SELECT * FROM lineas_pedidos WHERE pedido_id = {$id}";
-        $productos = $this->db->query($sql);
-        return $productos;
-        */
         $sql = "SELECT lp.*, p.nombre, p.precio, p.imagen 
         FROM lineas_pedidos lp 
         INNER JOIN productos p ON lp.producto_id = p.id 
