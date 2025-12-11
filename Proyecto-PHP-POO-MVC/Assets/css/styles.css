@@ -48,6 +48,32 @@ table {
     border-bottom: 1px solid #555;
 }
 
+.form-cambiar-estado {
+    display: flex;
+    align-items: center;
+    width: 95%;
+    gap: 10px;
+    /* Separación entre elementos */
+    margin: 20px 0;
+}
+
+.form-cambiar-estado h4 {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.form-cambiar-estado select {
+    width: auto;
+    margin: 0;
+    padding-right: 10px;
+    margin-right: 20px;
+}
+
+.form-cambiar-estado input[type="submit"] {
+    width: auto;
+    margin: 0;
+}
+
 td {
     border-top: 1px solid #ccc;
     padding: 2px;
@@ -1044,6 +1070,18 @@ button {
     border-radius: 10px;
     background: linear-gradient(to top, rgba(186, 229, 255, 0.1), rgba(41, 121, 205, 0.5));
     box-shadow: 0px 0px 10px #2979CD;
+}
+
+.resumen-pedido-header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.resumen-pedido-header-texto {
+    color: #044269;
 }
 
 .button-confirmado {

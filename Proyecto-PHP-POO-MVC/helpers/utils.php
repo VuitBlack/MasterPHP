@@ -52,4 +52,27 @@ class Utils
             }
         return $stats;
     }
+
+    public static function showStatus($status)
+    {
+        $value = "Pendiente";
+
+        switch ($status) {
+            case 'confirm':
+                $value = "Pendiente";
+                break;
+            case 'preparation':
+                $value = "En preparación";
+                break;
+            case 'ready':
+                $value = "Listo para enviar";
+                break;
+            case 'sent':
+                $value = "Enviado";
+                break;
+        }
+        
+        return $value;
+    }
+
 }
