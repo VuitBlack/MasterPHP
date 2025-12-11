@@ -70,7 +70,7 @@
 
 <div class="button-confirmado">
     <br/>
-    <a href="<?=base_url?>carrito/index" class="button button-pedido">Volver al carrito</a>
+    <a href="<?=base_url?>pedido/gestion" class="button button-pedido">Volver a Gestión Pedidos</a>
     <a href="<?=base_url?>" class="button button-pedido">Volver al inicio</a>
 </div>
 
