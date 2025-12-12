@@ -50,8 +50,12 @@ class carritoController
         exit;
     }
     
-    public function remove() {
-        
+    public function delete() {
+        if (isset($_GET['index'])) {
+            $index = $_GET['index'];
+            unset($_SESSION['carrito'][$index]);
+        } 
+        header('Location:' . base_url. 'carrito/index');
     }
 
     public function delete_all()

@@ -6,6 +6,7 @@
         <th>Nombre</th>
         <th>Precio</th>
         <th>Unidades</th>
+        <th>Eliminar</th>
     </tr>
     <?php foreach ($carrito as $indice => $elemento):
         $producto = $elemento['producto'];
@@ -27,10 +28,18 @@
             <td>
                 <?=$elemento['unidades']?>
             </td>
+            <td>
+                <a href="<?=base_url?>carrito/delete&index=<?=$indice?>" class="button button-del-producto button-red">Eliminar</a>
+            </td>
+
         </tr>
     <?php endforeach; ?>
 </table>
 <br/>
+
+<div class="button-delete-carrito">
+    <a href="<?=base_url?>carrito/delete_all" class="button button-delete button-red">Vaciar Carrito</a>
+</div>
 
 <div class="total-carrito">
     <?php $stats = Utils::statsCarrito(); ?>
