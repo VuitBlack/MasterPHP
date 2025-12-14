@@ -466,10 +466,23 @@ button {
     width: 100px;
 }
 
-.button-del-producto {
+.button-delete-producto .button {
     width: 75px;
     margin: 0px auto;
     text-align: center;
+}
+
+.button-updown {
+    width: 80px;
+    margin: 0px auto;
+}
+
+.button-updown .button {
+    display: block;
+    width: 20px;
+    float: left;
+    padding: 2px;
+    margin: 7px;
 }
 
 input[type="text"],
