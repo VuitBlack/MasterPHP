@@ -18,8 +18,6 @@ class Producto
         $this->db = Database::connect();
     }
     
-
-
     /**
      * Get the value of id
      */
@@ -191,6 +189,7 @@ class Producto
         $sql = "SELECT p.*, c.nombre AS 'catnombre' FROM productos p "
                 . "INNER JOIN categorias c ON c.id=p.categoria_id "
                 . "WHERE p.categoria_id = {$this->getCategoriaId()} "
+                . "AND p.stock > 0 "
                 . "ORDER BY id DESC";
         $productos = $this->db->query($sql);
         return $productos;
@@ -202,7 +201,7 @@ class Producto
     }
 
     public function getRandom($limit){
-        $producto = $this->db->query("SELECT * FROM productos ORDER BY RAND() LIMIT $limit");
+        $producto = $this->db->query("SELECT * FROM productos WHERE stock > 0 ORDER BY RAND() LIMIT $limit");
         return $producto;
     }
         

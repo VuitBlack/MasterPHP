@@ -2,7 +2,6 @@
 
 <?php while ($product = $productos->fetch_object()): ?>
 
-
     <div class="product">
         <a href="<?= base_url ?>producto/ver&id=<?= $product->id ?>">
             <?php if ($product->imagen != null): ?>
