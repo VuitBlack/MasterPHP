@@ -48,6 +48,11 @@ table {
     border-bottom: 1px solid #555;
 }
 
+td {
+    border-top: 1px solid #ccc;
+    padding: 2px;
+}
+
 .form-cambiar-estado {
     display: flex;
     align-items: center;
@@ -72,11 +77,6 @@ table {
 .form-cambiar-estado input[type="submit"] {
     width: auto;
     margin: 0;
-}
-
-td {
-    border-top: 1px solid #ccc;
-    padding: 2px;
 }
 
 .thumb {
@@ -1087,9 +1087,14 @@ button {
 }
 
 .texto-confirmado {
+    border-top: none;
     color: #044269;
     text-align: left;
     padding: 20px;
+}
+
+.texto-confirmado td {
+    border-top: none;
 }
 
 .resumen-pedido {

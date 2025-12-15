@@ -1,5 +1,6 @@
 <?php
 require_once 'models/pedido.php';
+require_once 'models/usuario.php';
 
 class pedidoController{
     public function index(){
@@ -84,6 +85,11 @@ class pedidoController{
             $pedido = new Pedido();
             $pedido->setId($id);
             $pedido = $pedido->getOne();
+
+            //Sacar el usuario
+            $usuario = new Usuario();
+            $usuario->setId($pedido->usuario_id);
+            $pedido->usuario = $usuario->getOne();
 
             //Obtener los productos
             $pedido_productos = new Pedido();

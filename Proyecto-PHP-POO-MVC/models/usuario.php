@@ -21,6 +21,16 @@ class Usuario
         return $this->id;
     }
 
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    public function getOne(){
+        $usuario = $this->db->query("SELECT * FROM usuarios WHERE id={$this->getId()}");
+        return $usuario->fetch_object();
+    }
+
     public function getNombre()
     {
         return $this->nombre;

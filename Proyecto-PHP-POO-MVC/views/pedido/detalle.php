@@ -7,6 +7,7 @@
         <div class="resumen-pedido-header-texto"><strong>Fecha:</strong> <?php echo $pedido->fecha; ?> </div>
         <div class="resumen-pedido-header-texto"><strong>Estado:</strong> <?=Utils::showStatus($pedido->estado)?></div>
     </div>
+    <br/>
 
     <?php if(isset($_SESSION['admin'])): ?> 
         <form class="form-cambiar-estado" action="<?=base_url?>pedido/cambiarEstado&id=<?=$pedido->id?>" method="post">
@@ -31,8 +32,6 @@
         </thead>
         <tbody>
             <?php if(isset($pedido)): ?>
-
-
                 <?php while($producto = $productos->fetch_object()): ?> 
                     <tr>
                         <td>
@@ -56,15 +55,30 @@
     <div class="total-confirmado">
         <h3>TOTAL: <?php echo $pedido->coste; ?> €</h3>
     </div>
-    <br/>
-    <div class="texto-confirmado">
-    <h3>La dirección de envío es:</h3>
-        <?php if(isset($pedido)): ?>
-            <p><strong>Provincia:</strong> <?php echo $pedido->provincia; ?></p>
-            <p><strong>Localidad:</strong> <?php echo $pedido->localidad; ?></p>
-            <p><strong>Dirección:</strong> <?php echo $pedido->direccion; ?></p>
-        <?php endif; ?>
-    </div>  
+       
+    <table class="texto-confirmado">
+            <tr>
+                <td class="texto-confirmado">
+                    <?php if(isset($_SESSION['admin'])): ?>
+                        <h3>Datos del cliente:</h3>
+                        <?php if(isset($pedido)): ?>
+                            <p><strong>Nombre:</strong> <?php echo $pedido->usuario->nombre; ?></p>
+                            <p><strong>Apellidos:</strong> <?php echo $pedido->usuario->apellidos; ?></p>
+                            <p><strong>Email:</strong> <?php echo $pedido->usuario->email; ?></p>
+                        <?php endif; ?>
+                    <?php endif; ?>
+                </td>
+                <td class="texto-confirmado">
+                    <h3>Dirección de envío:</h3>
+                    <?php if(isset($pedido)): ?>
+                        <p><strong>Provincia:</strong> <?php echo $pedido->provincia; ?></p>
+                        <p><strong>Localidad:</strong> <?php echo $pedido->localidad; ?></p>
+                        <p><strong>Dirección:</strong> <?php echo $pedido->direccion; ?></p>
+                    <?php endif; ?>
+                </td>
+            </tr>
+         
+    </table>
     
 </div>
 
