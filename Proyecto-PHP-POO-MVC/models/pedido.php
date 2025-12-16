@@ -141,13 +141,18 @@ class Pedido
         $pedido_id = $query->fetch_object()->pedido;
 
         foreach ($_SESSION['carrito'] as $elemento) {
+            //Salvar la línea de producto
             $producto = $elemento['producto'];
             $insert = "INSERT INTO lineas_pedidos VALUES(NULL, {$pedido_id}, {$producto->id}, {$elemento['unidades']});";
             $save = $this->db->query($insert);
+
+            //Actualizar stock del producto 
+            $updateStock = "UPDATE productos SET stock = stock - {$elemento['unidades']} WHERE id = {$producto->id};";
+            $update = $this->db->query($updateStock);
         }
 
         $result = false;
-        if ($save) {
+        if ($save && $update) {
             $result = true;
         }
         return $result;
