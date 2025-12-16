@@ -59,7 +59,10 @@ class carritoController
     }
 
     public function up() {
-        if (isset($_GET['index'])) {
+        $stock = $_SESSION['carrito'][$_GET['index']]['producto']->stock;
+        $unidades = $_SESSION['carrito'][$_GET['index']]['unidades'];
+        
+        if (isset($_GET['index']) && (($stock - $unidades) > 0)) {
             $index = $_GET['index'];
             $_SESSION['carrito'][$index]['unidades']++;
         } 

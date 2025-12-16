@@ -32,7 +32,7 @@
                     <div class="button-updown">
                         <a href="<?=base_url?>carrito/up&index=<?=$indice?>" class="button">+</a>
                         <a href="<?=base_url?>carrito/down&index=<?=$indice?>" class="button">-</a>
-                    </div>
+                    </div>          
                 </td>
                 <td>
                     <div class="button-delete-producto">
@@ -54,4 +54,6 @@
         <a href="<?=base_url?>pedido/index" class="button button-pedido">Hacer Pedido</a>
     </div>
 
+    <br/>
+    <br/>
 <?php endif; ?>
