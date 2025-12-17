@@ -8,6 +8,7 @@ class carritoController
         if(isset($_SESSION['carrito']) && count($_SESSION['carrito']) >= 1){
             $carrito = $_SESSION['carrito'];
             require 'views/carrito/index.php';
+            Utils::deleteSession('stock_error'); //Borra la sesión 'stock_error' si existe
 
         }else{
             require_once 'views/carrito/CarritoVacio.php';
@@ -65,6 +66,8 @@ class carritoController
         if (isset($_GET['index']) && (($stock - $unidades) > 0)) {
             $index = $_GET['index'];
             $_SESSION['carrito'][$index]['unidades']++;
+        } else {
+            $_SESSION['stock_error'] = $_GET['index'];      //Guarda el indice del producto que no tiene stock
         } 
         header('Location:' . base_url. 'carrito/index');
     }
@@ -83,7 +86,12 @@ class carritoController
     public function delete_all()
     {
         unset($_SESSION['carrito']);
-        header('Location:' . base_url . 'carrito/index');
+        
+        if(isset($_GET['red']) && $_GET['red'] == 'home'){
+            header('Location:' . base_url);
+        }else{
+            header('Location:' . base_url . 'carrito/index');
+        }
         exit;
     }
 }

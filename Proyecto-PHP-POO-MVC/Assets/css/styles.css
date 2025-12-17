@@ -485,6 +485,14 @@ button {
     margin: 7px;
 }
 
+.stock-alert {
+    clear: both;
+    color: red;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
 input[type="text"],
 input[type="password"],
 input[type="email"],

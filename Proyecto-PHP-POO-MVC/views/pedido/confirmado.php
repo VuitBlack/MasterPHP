@@ -61,7 +61,7 @@
     <div class="button-confirmado">
         <br/>
         <a href="<?=base_url?>carrito/index" class="button button-pedido">Volver al carrito</a>
-        <a href="<?=base_url?>pedido/index" class="button button-pedido">Realizar otro pedido</a>
+        <a href="<?=base_url?>carrito/delete_all?red=home" class="button button-pedido">Volver al Inicio</a>
     </div>
     
 
@@ -69,6 +69,6 @@
     <h1>Tu pedido no se ha confirmado</h1>
     <br/>
     <a href="<?=base_url?>carrito/index" class="button button-pedido">Volver al carrito</a>
-    <a href="<?=base_url?>pedido/index" class="button button-pedido">Realizar otro pedido</a>
+    <a href="<?=base_url?>carrito/delete_all?red=home" class="button button-pedido">Volver al Inicio</a>
 
 <?php endif;?>

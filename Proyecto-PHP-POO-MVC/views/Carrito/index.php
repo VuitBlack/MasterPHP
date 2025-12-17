@@ -32,7 +32,11 @@
                     <div class="button-updown">
                         <a href="<?=base_url?>carrito/up&index=<?=$indice?>" class="button">+</a>
                         <a href="<?=base_url?>carrito/down&index=<?=$indice?>" class="button">-</a>
-                    </div>          
+                    </div>
+                    <!-- Alerta de falta de stock -->
+                    <?php if(isset($_SESSION['stock_error']) && $_SESSION['stock_error'] == $indice): ?>
+                        <div class="stock-alert">No hay mas Stock</div>
+                    <?php endif; ?>
                 </td>
                 <td>
                     <div class="button-delete-producto">
