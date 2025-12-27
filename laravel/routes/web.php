@@ -22,3 +22,10 @@ Route::get('mostrar_fecha', function () {
         )
     );
 });
+
+Route::get('/pelicula/{titulo?}', function ($titulo = "Sin película seleccionada") {
+    return view('pelicula', array(
+        'titulo' => $titulo
+        )
+    );
+});
