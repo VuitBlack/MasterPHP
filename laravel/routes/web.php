@@ -29,3 +29,15 @@ Route::get('/pelicula/{titulo?}', function ($titulo = "Sin película seleccionad
         )
     );
 });
+
+Route::get('/tituloLibro/{titulo}/{year?}', function ($titulo, $year = 2025) {
+    return view('tituloLibro', array(
+        'titulo' => $titulo,
+        'year' => $year
+        )
+    );
+})->where(array(
+    'tituloLibro' => '[A-Za-z]+',
+    'year' => '[0-9]{4}'
+    )
+);
