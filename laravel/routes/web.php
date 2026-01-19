@@ -70,7 +70,8 @@ Route::get('/listado-peliculas-2', function () {
         'X-Men',
         'Guardianes de la Galaxia'
     );
-  return view('peliculas.listado')
+  return view('peliculas.listado_2')
     ->with('titulo', $titulo)
     ->with('peliculas', $peliculas);
 });
+
