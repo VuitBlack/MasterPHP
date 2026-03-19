@@ -5,18 +5,19 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     //return view('welcome');
     echo "<h1>Hola Mundo</h1>";
+    echo "<h2>Este es mi primer proyecto con Laravel 12</h2>";
 });
 
-/*
-GET: Obtener datos
-POST: Enviar datos
-PUT: Actualizar datos
-DELETE: Eliminar datos
+/* 
+Métodos http:
+    GET: Obtener datos
+    POST: Enviar datos
+    PUT: Actualizar datos
+    DELETE: Eliminar datos
 */
 
 Route::get('mostrar_fecha', function () {
     $titulo = "Mostar la fecha actual: ";
-    $fecha = date('d/m/Y');
     return view('mostrarFecha', $arrayName = array(
         'titulo' => $titulo
         )
