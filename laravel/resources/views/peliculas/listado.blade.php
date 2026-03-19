@@ -6,3 +6,6 @@
     <?php } ?>
 </ul>
 
+<!-- Esto es un comentario html-->
+ <?php /* Esto es un comentario en php */ ?>
+{{-- Esto es un comentario en Blade --}}
