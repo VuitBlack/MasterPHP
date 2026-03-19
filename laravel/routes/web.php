@@ -76,3 +76,7 @@ Route::get('/listado-peliculas-2', function () {
     ->with('titulo', $titulo)
     ->with('peliculas', $peliculas);
 });
+
+Route::get('/pagina-generica', function () {
+    return view('pagina');
+});
