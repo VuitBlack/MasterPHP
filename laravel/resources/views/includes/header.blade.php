@@ -1,0 +1,2 @@
+<h1>CABECERA DE LA PÁGINA</h1>
+<hr/>
