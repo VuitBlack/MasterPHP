@@ -28,3 +28,25 @@
  @else
     <h1>El título no existe<h1>
 @endif
+
+<!-- BUCLES-->
+ @for($i = 1; $i <= 20; $i++)
+    El número es: {{$i}}<br/>
+ @endfor
+
+ <hr/>
+ <?php $contador = 1; ?>
+
+ @while($contador <= 20)
+    @if($contador % 2 == 0)
+        El número es par: {{$contador}}<br/>
+    @endif
+    <?php $contador++; ?>
+ @endwhile
+
+ <hr/>
+ @foreach($peliculas as $pelicula)
+    <p>{{$pelicula}}</p>
+ @endforeach
+ 
+
