@@ -3,7 +3,5 @@
 
 
 @if (isset($pagina))
-    <p>La página solicitada es: {{ $pagina }}</p>
-@else
-<p>No has especificado una página</p>
+    <p>La página es: {{ $pagina }}</p>
 @endif
