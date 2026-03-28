@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UsuarioController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -17,8 +18,10 @@ use App\Http\Controllers\PeliculaController;
 //Enviamos un parámetro opcional el número de página a la acción index del controlador PeliculaController
 Route::get('/peliculas/{pagina?}', [PeliculaController::class , 'index']);
 
+Route::get('/detalle', [PeliculaController::class , 'detalle'])->name('detalle.pelicula');
 
 
+Route::resource('usuario', UsuarioController::class);
 
 
 
