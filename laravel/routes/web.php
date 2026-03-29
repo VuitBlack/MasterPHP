@@ -16,9 +16,11 @@ Route::get('Hello_World', function () {
 use App\Http\Controllers\PeliculaController;
 
 //Enviamos un parámetro opcional el número de página a la acción index del controlador PeliculaController
-Route::get('/peliculas/{pagina?}', [PeliculaController::class , 'index']);
+Route::get('/peliculas/{pagina?}', [PeliculaController::class, 'index']);
 
-Route::get('/detalle', [PeliculaController::class , 'detalle'])->name('detalle.pelicula');
+Route::get('/detalle', [PeliculaController::class, 'detalle'])->name('detalle.pelicula');
+
+Route::get('/redirigir', [PeliculaController::class, 'redirigir']);
 
 
 Route::resource('usuario', UsuarioController::class);
