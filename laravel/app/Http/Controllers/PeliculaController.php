@@ -21,6 +21,12 @@ class PeliculaController extends Controller
         return view('pelicula.detalle');
     }
 
+    public function detalle_1($year = null)
+    {
+        return view('pelicula.detalle_1');
+    }
+
+
     public function redirigir()
     {
         return redirect()->action([

@@ -22,6 +22,7 @@ Route::get('/detalle', [PeliculaController::class, 'detalle'])->name('detalle.pe
 
 Route::get('/redirigir', [PeliculaController::class, 'redirigir']);
 
+Route::get('/detalle_1/{year?}', [PeliculaController::class, 'detalle_1'])->middleware(\App\Http\Middleware\TestYear::class);
 
 Route::resource('usuario', UsuarioController::class);
 
