@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+
 class PeliculaController extends Controller
 {
     //Los controladores tienen acciones que son funciones
@@ -32,6 +33,25 @@ class PeliculaController extends Controller
         return redirect()->action([
             \App\Http\Controllers\PeliculaController::class,
             'detalle'
+        ]);
+    }
+
+    public function formulario()
+    {
+        return view('pelicula.formulario');
+    }
+
+    public function recibir(Request $request)
+    {
+        $nombre = $request->input('nombre');
+        $apellidos = $request->input('apellidos');
+        $email = $request->input('email');
+
+
+        return view('pelicula.datos_form', [
+            'nombre' => $nombre,
+            'apellidos' => $apellidos,
+            'email' => $email
         ]);
     }
 }

@@ -26,7 +26,10 @@ Route::get('/detalle_1/{year?}', [PeliculaController::class, 'detalle_1'])->midd
 
 Route::resource('usuario', UsuarioController::class);
 
+Route::get('/formulario', [PeliculaController::class, 'formulario']);
+Route::post('/recibir', [PeliculaController::class, 'recibir']);
 
+Route::get('datos_form', [PeliculaController::class, 'datos_form']);
 
 /*  Métodos http:
  GET: Obtener datos
