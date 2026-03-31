@@ -13,6 +13,7 @@ return new class extends Migration {
         // Elimina la tabla si ya existe para evitar conflictos
         Schema::dropIfExists('usuarios');
 
+
         // Crea la tabla desde cero leyendo todas las columnas
         Schema::create('usuarios', function (Blueprint $table) {
             $table->increments('id');
@@ -24,6 +25,21 @@ return new class extends Migration {
             $table->string('password', 255);
             $table->timestamps();
         });
+
+        /*
+        // CREA LA MISMA BBDD al realizar el comando "php artisan migrate:refresh" PERO CON SQL PURO
+        DB::statement('
+            CREATE TABLE usuarios (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            nombre VARCHAR(100) NOT NULL,
+            apellidos VARCHAR(200) NOT NULL,
+            edad INT NOT NULL,
+            sueldo DECIMAL(10, 2) NOT NULL,
+            email VARCHAR(100) NOT NULL,
+            password VARCHAR(255) NOT NULL
+
+        )');
+        */
     }
 
     /**
