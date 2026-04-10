@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsuarioController;
+use App\Http\Controllers\FrutaController;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -30,6 +32,11 @@ Route::get('/formulario', [PeliculaController::class, 'formulario']);
 Route::post('/recibir', [PeliculaController::class, 'recibir']);
 
 Route::get('datos_form', [PeliculaController::class, 'datos_form']);
+
+//Rutas de frutas
+Route::group(['prefix' => 'frutas'], function () {
+    Route::get('index', [FrutaController::class, 'index']);
+});
 
 /*  Métodos http:
  GET: Obtener datos
