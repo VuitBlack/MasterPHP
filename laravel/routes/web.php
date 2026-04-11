@@ -37,6 +37,7 @@ Route::get('datos_form', [PeliculaController::class, 'datos_form']);
 Route::group(['prefix' => 'frutas'], function () {
     Route::get('index', [FrutaController::class, 'index']);
     Route::get('detail/{id}', [FrutaController::class, 'detail']);
+    Route::get('lastfirst', [FrutaController::class, 'lastFirst']);
 });
 
 /*  Métodos http:

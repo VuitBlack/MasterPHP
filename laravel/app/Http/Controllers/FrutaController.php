@@ -18,4 +18,11 @@ class FrutaController extends Controller
         $fruta = DB::table('frutas')->where('id', $id)->first();
         return view('fruta.detail', ['fruta' => $fruta]);
     }
+
+    public function lastFirst()
+    {
+        $frutas = DB::table('frutas')->orderBy('id', 'desc')->get();
+        return view('fruta.lastfirst', ['frutas' => $frutas]);
+    }
+
 }
