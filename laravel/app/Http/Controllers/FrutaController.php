@@ -10,9 +10,12 @@ class FrutaController extends Controller
     public function index()
     {
         $frutas = DB::table('frutas')->get();
-        return view(
-            'fruta.index',
-            ['frutas' => $frutas]
-        );
+        return view('fruta.index', ['frutas' => $frutas]);
+    }
+
+    public function detail($id)
+    {
+        $fruta = DB::table('frutas')->where('id', $id)->first();
+        return view('fruta.detail', ['fruta' => $fruta]);
     }
 }

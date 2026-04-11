@@ -36,6 +36,7 @@ Route::get('datos_form', [PeliculaController::class, 'datos_form']);
 //Rutas de frutas
 Route::group(['prefix' => 'frutas'], function () {
     Route::get('index', [FrutaController::class, 'index']);
+    Route::get('detail/{id}', [FrutaController::class, 'detail']);
 });
 
 /*  Métodos http:
