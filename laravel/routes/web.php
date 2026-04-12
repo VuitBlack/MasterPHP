@@ -38,6 +38,8 @@ Route::group(['prefix' => 'frutas'], function () {
     Route::get('index', [FrutaController::class, 'index']);
     Route::get('detail/{id}', [FrutaController::class, 'detail']);
     Route::get('lastfirst', [FrutaController::class, 'lastFirst']);
+    Route::get('crear', [FrutaController::class, 'crear']);
+    Route::post('save', [FrutaController::class, 'save']);
 });
 
 /*  Métodos http:

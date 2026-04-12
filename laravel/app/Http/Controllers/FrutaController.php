@@ -25,4 +25,23 @@ class FrutaController extends Controller
         return view('fruta.lastfirst', ['frutas' => $frutas]);
     }
 
+    public function crear()
+    {
+        return view('fruta.create');
+    }
+
+    public function save(Request $request)
+    {
+        //Guarda el registro en la BBDD
+        $frutas = DB::table('frutas')->insert([
+
+            'nombre' => $request->input('nombre'),
+            'descripcion' => $request->input('descripcion'),
+            'precio' => $request->input('precio'),
+            'fecha' => $request->input('fecha'),
+        ]);
+
+        return redirect()->action([FrutaController::class, 'index']);
+    }
+
 }
