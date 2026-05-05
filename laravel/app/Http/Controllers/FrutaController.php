@@ -41,7 +41,13 @@ class FrutaController extends Controller
             'fecha' => $request->input('fecha'),
         ]);
 
-        return redirect()->action([FrutaController::class, 'index']);
+        return redirect()->action([FrutaController::class, 'index'])->with('status', 'Fruta creada correctamente');
+    }
+
+    public function delete($id)
+    {
+        $frutas = DB::table('frutas')->where('id', $id)->delete();
+        return redirect()->action([FrutaController::class, 'index'])->with('status', 'Fruta eliminada correctamente');
     }
 
 }

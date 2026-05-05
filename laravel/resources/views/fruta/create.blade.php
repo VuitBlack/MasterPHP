@@ -11,7 +11,7 @@
     </P>
     <P>
         <label for="precio">Precio</label>
-        <input type="decimal(10,2)" name="precio" id="precio">
+        <input type="number" step="0.01" name="precio" id="precio">
     </P>
     <P>
         <label for="fecha">Fecha</label>
