@@ -4,4 +4,4 @@
 <p>Fecha: {{ $fruta->fecha }}</p>
 
 <a href="{{ action([App\Http\Controllers\FrutaController::class, 'delete'], $fruta->id) }}">Eliminar</a>
-<a href="">Actualizar</a>
+<a href="{{ action([App\Http\Controllers\FrutaController::class, 'edit'], $fruta->id) }}">Actualizar</a>

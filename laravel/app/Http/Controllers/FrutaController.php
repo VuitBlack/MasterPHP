@@ -50,4 +50,27 @@ class FrutaController extends Controller
         return redirect()->action([FrutaController::class, 'index'])->with('status', 'Fruta eliminada correctamente');
     }
 
+
+    public function edit($id)
+    {
+        //Obtiene el registro a actualizar
+        $fruta = DB::table('frutas')->where('id', $id)->first();
+
+        //envía el registro a la vista y rellena los campos del formulario
+        return view('fruta.create', ['fruta' => $fruta]);
+    }
+
+    public function update(Request $request)
+    {
+        $id = $request->input('id');
+        $frutas = DB::table('frutas')->where('id', $id)->update([
+            'nombre' => $request->input('nombre'),
+            'descripcion' => $request->input('descripcion'),
+            'precio' => $request->input('precio'),
+            'fecha' => $request->input('fecha'),
+        ]);
+
+        return redirect()->action([FrutaController::class, 'index'])->with('status', 'Fruta actualizada correctamente');
+    }
+
 }

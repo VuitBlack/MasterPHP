@@ -41,6 +41,8 @@ Route::group(['prefix' => 'frutas'], function () {
     Route::get('crear', [FrutaController::class, 'crear']);
     Route::post('save', [FrutaController::class, 'save']);
     Route::get('delete/{id}', [FrutaController::class, 'delete']);
+    Route::get('editar/{id}', [FrutaController::class, 'edit']);
+    Route::post('update', [FrutaController::class, 'update']);
 });
 
 /*  Métodos http:
