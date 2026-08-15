@@ -29,4 +29,10 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    //Relacion One to Many para las imágenes subidas por el usuario
+    public function images()
+    {
+        return $this->hasMany(Image::class)->orderBy('id', 'desc'); 
+    }
 }
