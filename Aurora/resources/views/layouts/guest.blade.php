@@ -8,6 +8,8 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
+    <link rel="icon" type="image/png" href="{{ asset('images/favicon.png') }}">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
@@ -24,7 +26,8 @@
             </a>
         </div>
 
-        <div class="w-full sm:max-w-md mt-6 px-8 py-6 bg-[#9B5975] text-white shadow-2xl overflow-hidden sm:rounded-2xl border border-white/20">
+        <div
+            class="w-full sm:max-w-md mt-6 px-8 py-6 bg-[#9B5975] text-white shadow-2xl overflow-hidden sm:rounded-2xl border border-white/20">
             {{ $slot }}
         </div>
     </div>

@@ -7,6 +7,8 @@
 
     <title>{{ config('app.name', 'Aurora') }}</title>
 
+    <link rel="icon" type="image/png" href="{{ asset('images/favicon.png') }}">
+
     @fonts
 
     <!-- Styles / Scripts -->
@@ -2193,8 +2195,7 @@
     <div class="content w-full flex justify-center">
         <div
             class="flex flex-col items-center justify-center w-full transition-opacity opacity-100 duration-750 lg:grow">
-            <h1
-                class="mb-3 text-3xl font-bold tracking-tight text-white lg:text-4xl">
+            <h1 class="mb-3 text-3xl font-bold tracking-tight text-white lg:text-4xl">
                 Welcome to Aurora</h1>
             <p class="mb-6 text-pink-200 text-base max-w-lg text-center">
                 Aurora is a new social media full of exciting features.</p>
