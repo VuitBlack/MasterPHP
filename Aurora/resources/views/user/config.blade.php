@@ -11,7 +11,8 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 flex justify-center">
 
             <!-- Tarjeta con tamaño uniforme (sm:max-w-md) y centrada como en registro -->
-            <div class="w-full sm:max-w-md px-8 py-6 bg-[#9B5975] text-white shadow-2xl overflow-hidden sm:rounded-2xl border border-white/20">
+            <div
+                class="w-full sm:max-w-md px-8 py-6 bg-[#9B5975] text-white shadow-2xl overflow-hidden sm:rounded-2xl border border-white/20">
                 <header>
                     <h2 class="text-lg font-medium text-white">
                         {{ __('Ajustes de la Cuenta') }}
@@ -22,7 +23,7 @@
                 </header>
 
                 <!-- Formulario -->
-                <form method="POST" action="#" class="mt-6 space-y-4">
+                <form method="POST" action="{{ route('user.update') }}" class="mt-6 space-y-4">
                     @csrf
 
                     <!-- Name -->
@@ -60,8 +61,8 @@
                     <!-- Password -->
                     <div>
                         <x-input-label for="password" :value="__('Password')" />
-                        <x-text-input id="password" class="block mt-1 w-full" type="password" name="password"
-                            required autocomplete="new-password" />
+                        <x-text-input id="password" class="block mt-1 w-full" type="password" name="password" required
+                            autocomplete="new-password" />
                         <x-input-error :messages="$errors->get('password')" class="mt-2" />
                     </div>
 
