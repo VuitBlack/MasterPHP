@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS users (
 
 insert into users (id, role, name, surname, nick, email, password, image, created_at, updated_at, remember_token) values
 (NULL, 'admin', 'Admin', 'Admin', 'Admin', 'admin@gmail.com', '1234', NULL, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL),
-(NULL, 'user', 'Tony', 'Stark', 'Ironman', 'ironman@gmail.com', '1234', NULL, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL),
+(NULL, 'user', 'Tony', 'Stark', 'Ironman', 'ironman@gmail.com', '123456789', NULL, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL),
 (NULL, 'user', 'Steve', 'Rogers', 'CaptainAmerica', 'captainamerica@gmail.com', '1234', NULL, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL);
 
 CREATE TABLE IF NOT EXISTS images(

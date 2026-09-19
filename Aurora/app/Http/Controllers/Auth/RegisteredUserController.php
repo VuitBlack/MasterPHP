@@ -31,11 +31,15 @@ class RegisteredUserController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'surname' => ['required', 'string', 'max:255'],
-            'nick' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
+            'name' => ['required', 'string', 'max:50', 'regex:/^[\pL\s]+$/u'],
+            'surname' => ['required', 'string', 'max:50', 'regex:/^[\pL\s]+$/u'],
+            'nick' => ['required', 'string', 'max:50', 'unique:' . User::class],
+            'email' => ['required', 'string', 'lowercase', 'email', 'max:100', 'unique:' . User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
+        ], [
+            'name.regex' => 'El nombre solo puede contener letras y espacios.',
+            'surname.regex' => 'Los apellidos solo pueden contener letras y espacios.',
+            'nick.unique' => 'Este nick ya está en uso, por favor elige otro.',
         ]);
 
         $user = User::create([

@@ -27,7 +27,7 @@
                     <x-slot name="trigger">
                         <button
                             class="inline-flex items-center px-3 py-2 border border-[#9B5975]/40 text-sm leading-4 font-medium rounded-lg text-pink-100 bg-[#9B5975]/20 hover:bg-[#9B5975]/40 hover:text-white focus:outline-none transition ease-in-out duration-150">
-                            <div>{{ Auth::user()->name }}</div>
+                            <div>{{ Auth::user()->nick }}</div>
 
                             <div class="ms-1">
                                 <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"

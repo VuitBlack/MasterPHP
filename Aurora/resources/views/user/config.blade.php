@@ -22,6 +22,25 @@
                     </p>
                 </header>
 
+                <!-- Mensajes de feedback -->
+                @if (session('message'))
+                    <div class="mt-4 p-3 rounded-xl bg-emerald-500/20 border border-emerald-400/50 text-emerald-100 text-sm flex items-center gap-2">
+                        <svg class="w-5 h-5 flex-shrink-0 text-emerald-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>{{ session('message') }}</span>
+                    </div>
+                @endif
+
+                @if (session('error'))
+                    <div class="mt-4 p-3 rounded-xl bg-red-500/20 border border-red-400/50 text-red-100 text-sm flex items-center gap-2">
+                        <svg class="w-5 h-5 flex-shrink-0 text-red-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                        <span>{{ session('error') }}</span>
+                    </div>
+                @endif
+
                 <!-- Formulario -->
                 <form method="POST" action="{{ route('user.update') }}" class="mt-6 space-y-4">
                     @csrf
@@ -61,7 +80,7 @@
                     <!-- Password -->
                     <div>
                         <x-input-label for="password" :value="__('Password')" />
-                        <x-text-input id="password" class="block mt-1 w-full" type="password" name="password" required
+                        <x-text-input id="password" class="block mt-1 w-full" type="password" name="password"
                             autocomplete="new-password" />
                         <x-input-error :messages="$errors->get('password')" class="mt-2" />
                     </div>
@@ -70,7 +89,7 @@
                     <div>
                         <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
                         <x-text-input id="password_confirmation" class="block mt-1 w-full" type="password"
-                            name="password_confirmation" required autocomplete="new-password" />
+                            name="password_confirmation" autocomplete="new-password" />
                         <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
                     </div>
 
