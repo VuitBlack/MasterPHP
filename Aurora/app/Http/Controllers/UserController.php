@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Storage;
+
 
 class UserController extends Controller
 {
@@ -38,6 +40,16 @@ class UserController extends Controller
         $user->surname = $request->input('surname');
         $user->nick = $request->input('nick');
         $user->email = $request->input('email');
+
+        // 3.Gestionar la imagen del avatar de usuario
+
+        $image = $request->file('image');
+
+        if ($image) {
+            $image_name = time() . $image->getClientOriginalName();
+            $image->storeAs('avatars', $image_name, 'avatars');
+            $user->image = $image_name;
+        }
 
         // Si el usuario introdujo una nueva contraseña, se encripta y actualiza
         if ($request->filled('password')) {

@@ -42,7 +42,7 @@
                 @endif
 
                 <!-- Formulario -->
-                <form method="POST" action="{{ route('user.update') }}" class="mt-6 space-y-4">
+                <form method="POST" action="{{ route('user.update') }}" enctype="multipart/form-data" class="mt-6 space-y-4">
                     @csrf
 
                     <!-- Name -->
@@ -76,6 +76,14 @@
                             :value="Auth::user()->email" />
                         <x-input-error :messages="$errors->get('email')" class="mt-2" />
                     </div>
+
+                    <!-- User Image -->
+                    <div>
+                        <x-input-label for="image" :value="__('Avatar')" />
+                        <x-text-input id="image" class="block mt-1 w-full" type="file" name="image" />
+                        <x-input-error :messages="$errors->get('image')" class="mt-2" />
+                    </div>
+                    
 
                     <!-- Password -->
                     <div>
