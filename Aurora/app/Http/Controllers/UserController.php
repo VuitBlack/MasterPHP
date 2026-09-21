@@ -33,7 +33,7 @@ class UserController extends Controller
             'surname.regex' => 'Los apellidos solo pueden contener letras y espacios.',
         ]);
 
-        // 3. Asignar los nuevos valores
+        // 3. Asignar los nuevos valores al objeto de usuario
         $user->name = $request->input('name');
         $user->surname = $request->input('surname');
         $user->nick = $request->input('nick');
