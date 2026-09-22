@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rule;
@@ -41,27 +42,36 @@ class UserController extends Controller
         $user->nick = $request->input('nick');
         $user->email = $request->input('email');
 
-        // 3.Gestionar la imagen del avatar de usuario
-
+        // 4.Gestionar la imagen del avatar de usuario
         $image = $request->file('image');
-
         if ($image) {
             $image_name = time() . $image->getClientOriginalName();
-            $image->storeAs('avatars', $image_name, 'avatars');
+            $image->storeAs('', $image_name, 'avatars');
             $user->image = $image_name;
         }
 
-        // Si el usuario introdujo una nueva contraseña, se encripta y actualiza
+        // 5.Si el usuario introdujo una nueva contraseña, se encripta y actualiza
         if ($request->filled('password')) {
             $user->password = Hash::make($request->input('password'));
         }
 
-        // 4. Guardar los cambios en la base de datos con manejo de errores
+        // 6. Guardar los cambios en la base de datos con manejo de errores
         try {
             $user->save();
             return redirect()->route('config')->with('message', 'Los datos se han guardado correctamente.');
         } catch (\Exception $e) {
             return redirect()->route('config')->with('error', 'Ha ocurrido un error y los datos no se han podido guardar.');
         }
+    }
+
+    public function getImage($filename)
+    {
+        // 1. Comprueba si el archivo existe
+        if (!Storage::disk('avatars')->exists($filename)) {
+            abort(404);
+        }
+
+        // 2. Lee el archivo y genera la respuesta con sus cabeceras automáticamente
+        return response()->file(storage_path('app/avatars/' . $filename));
     }
 }

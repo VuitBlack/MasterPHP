@@ -24,8 +24,10 @@
 
                 <!-- Mensajes de feedback -->
                 @if (session('message'))
-                    <div class="mt-4 p-3 rounded-xl bg-emerald-500/20 border border-emerald-400/50 text-emerald-100 text-sm flex items-center gap-2">
-                        <svg class="w-5 h-5 flex-shrink-0 text-emerald-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div
+                        class="mt-4 p-3 rounded-xl bg-emerald-500/20 border border-emerald-400/50 text-emerald-100 text-sm flex items-center gap-2">
+                        <svg class="w-5 h-5 flex-shrink-0 text-emerald-300" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
                         <span>{{ session('message') }}</span>
@@ -33,16 +35,38 @@
                 @endif
 
                 @if (session('error'))
-                    <div class="mt-4 p-3 rounded-xl bg-red-500/20 border border-red-400/50 text-red-100 text-sm flex items-center gap-2">
-                        <svg class="w-5 h-5 flex-shrink-0 text-red-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    <div
+                        class="mt-4 p-3 rounded-xl bg-red-500/20 border border-red-400/50 text-red-100 text-sm flex items-center gap-2">
+                        <svg class="w-5 h-5 flex-shrink-0 text-red-300" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                            </path>
                         </svg>
                         <span>{{ session('error') }}</span>
                     </div>
                 @endif
 
+                <!-- Avatar -->
+                <div class="flex justify-center w-full mb-8">
+                    <div
+                        class="relative w-20 h-20 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl flex items-center justify-center bg-[#7D4E65]">
+                        @if (Auth::user()->image)
+                            <!-- Mostrar la imagen del usuario con la ruta correcta -->
+                            <img src="{{ route('user.avatar', Auth::user()->image) }}" alt="Avatar"
+                                class="w-full h-full object-cover">
+                        @else
+                            <!-- Icono por defecto si no hay imagen -->
+                            <svg class="w-20 h-20 text-white/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                            </svg>
+                        @endif
+                    </div>
+                </div>
+
                 <!-- Formulario -->
-                <form method="POST" action="{{ route('user.update') }}" enctype="multipart/form-data" class="mt-6 space-y-4">
+                <form method="POST" action="{{ route('user.update') }}" enctype="multipart/form-data"
+                    class="mt-6 space-y-4">
                     @csrf
 
                     <!-- Name -->
@@ -83,7 +107,7 @@
                         <x-text-input id="image" class="block mt-1 w-full" type="file" name="image" />
                         <x-input-error :messages="$errors->get('image')" class="mt-2" />
                     </div>
-                    
+
 
                     <!-- Password -->
                     <div>

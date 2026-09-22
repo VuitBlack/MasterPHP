@@ -18,6 +18,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::get('/config', [UserController::class, 'config'])->name('config');
     Route::post('/user/update', [UserController::class, 'update'])->name('user.update');
+    Route::get('/user/avatars/{filename}', [UserController::class, 'getImage'])->name('user.avatar');
+
 });
 
 require __DIR__ . '/auth.php';
