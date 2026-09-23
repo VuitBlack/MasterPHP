@@ -25,8 +25,15 @@
             <div class="hidden sm:flex sm:items-center sm:ms-6">
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
+
+
+                        <!-- Menu desplegable del usuario -->
                         <button
                             class="inline-flex items-center px-3 py-2 border border-[#9B5975]/40 text-sm leading-4 font-medium rounded-lg text-pink-100 bg-[#9B5975]/20 hover:bg-[#9B5975]/40 hover:text-white focus:outline-none transition ease-in-out duration-150">
+
+                            <!-- Avatar del usuario dentro del botón -->
+                            <x-avatar class="w-8 h-8 shadow-2xl" style="margin-right: 15px" />
+
                             <div>{{ Auth::user()->nick }}</div>
 
                             <div class="ms-1">

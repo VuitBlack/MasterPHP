@@ -47,21 +47,8 @@
                 @endif
 
                 <!-- Avatar -->
-                <div class="flex justify-center w-full mb-8">
-                    <div
-                        class="relative w-20 h-20 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl flex items-center justify-center bg-[#7D4E65]">
-                        @if (Auth::user()->image)
-                            <!-- Mostrar la imagen del usuario con la ruta correcta -->
-                            <img src="{{ route('user.avatar', Auth::user()->image) }}" alt="Avatar"
-                                class="w-full h-full object-cover">
-                        @else
-                            <!-- Icono por defecto si no hay imagen -->
-                            <svg class="w-20 h-20 text-white/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
-                            </svg>
-                        @endif
-                    </div>
+                <div class="flex justify-center w-full my-6">
+                    <x-avatar class="w-36 h-36 shadow-2xl" />
                 </div>
 
                 <!-- Formulario -->
